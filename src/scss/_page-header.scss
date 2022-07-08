@@ -1,0 +1,86 @@
+.page-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 300;
+    color: white;
+}
+
+.page-header__row {
+    display: flex;
+    align-items: center;
+    padding: 1.8rem 0;
+}
+
+.page-header__burger {
+    display: inline-flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    margin-right: 4rem;
+    align-items: center;
+    justify-content: center;
+    & > span {
+        width: 100%;
+        height: 1.5px;
+        margin-bottom: 8px;
+        background-color: #fff;
+        transition: transform 0.2s, opacity 0.2s;
+        transform-origin: left center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:nth-child(3) {
+            transform: scaleX(0.7);
+        }
+    }
+}
+
+.page-header__nav {
+    & > ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        & > li {
+            & > a {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 120%;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.page-header__order-link {
+    margin-left: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: .15rem solid #FFFFFF;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    transition: color .2s, background-color .2s, border-color .2s;
+    display: inline-flex;
+    align-items: center;
+    svg {
+        flex-shrink: 0;
+        width: 2.4rem;
+        height: 1.8rem;
+        fill: currentColor;
+        transition: fill .2s, transform .2s;
+    }
+}

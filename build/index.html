@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>
+        Главная страница
+    </title>
+</head>
+
+<body class="no-touch" ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 50.1 37.9" id="arrow-left" xmlns="http://www.w3.org/2000/svg"><path d="M13.1 13a18.36 18.36 0 005.4-13h1.1a19.56 19.56 0 01-1.1 6.4 19.25 19.25 0 01-12.1 12h43.7v1.1H6.5a19.41 19.41 0 0111.9 12 19.11 19.11 0 011.1 6.4h-1.1a18.36 18.36 0 00-5.4-13A18.07 18.07 0 00.6 19.6H0v-1.1A19.58 19.58 0 0013.1 13z"/></symbol><symbol viewBox="0 0 50.1 37.9" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M37 13a18.36 18.36 0 01-5.4-13h-1.1a19.56 19.56 0 001.1 6.4 19.25 19.25 0 0012.1 12H0v1.1h43.6a19.41 19.41 0 00-11.9 12 19.11 19.11 0 00-1.1 6.4h1.1a18.36 18.36 0 015.4-13 18.07 18.07 0 0112.4-5.3h.6v-1.1A19.58 19.58 0 0137 13z"/></symbol><symbol viewBox="0 0 37.57 49.83" id="arrow-up" xmlns="http://www.w3.org/2000/svg"><path d="M24.73 13A18.23 18.23 0 0119.36.19V0h-1.15v.22A18.28 18.28 0 0112.84 13 18.27 18.27 0 010 18.4v1.15a16.86 16.86 0 006.33-1.15A19.28 19.28 0 0018.21 6.54v43.29h1.15V6.53A19.25 19.25 0 0031.24 18.4a16.86 16.86 0 006.33 1.15V18.4A18.27 18.27 0 0124.73 13z"/></symbol><symbol viewBox="0 0 30 30" id="contacts-1" xmlns="http://www.w3.org/2000/svg"><path d="M24.66 25.25a.25.25 0 01-.16-.05l-5.12-4.13H5.08a2.26 2.26 0 01-2.33-2.34V8.09a2.26 2.26 0 012.33-2.34h20.1a2.26 2.26 0 012.33 2.34v10.64a2.36 2.36 0 01-2.33 2.34h-1.72l1.44 3.85a.26.26 0 01-.09.29.28.28 0 01-.15.04zm-19.58-19a1.76 1.76 0 00-1.83 1.84v10.64a1.76 1.76 0 001.83 1.84h14.38a.23.23 0 01.16.06l4.49 3.61-1.24-3.33a.23.23 0 010-.23.23.23 0 01.2-.11h2.08A1.86 1.86 0 0027 18.73V8.09a1.76 1.76 0 00-1.83-1.84z"/><path d="M20.85 11H7.16a.25.25 0 010-.5h13.69a.25.25 0 010 .5zM16.69 15.84H7.16a.25.25 0 010-.5h9.53a.25.25 0 010 .5z"/></symbol><symbol viewBox="0 0 30 30" id="contacts-2" xmlns="http://www.w3.org/2000/svg"><path d="M9.86 29.12a1.75 1.75 0 01-.67-.12 2 2 0 01-1.08-1.21L6.81 24a1 1 0 01.45-1.29l4-3.09a1 1 0 01.72-.3 1.09 1.09 0 01.75.32l2.46 2a15.41 15.41 0 003.69-2.83 18.7 18.7 0 003-3.88l-2-2.49c-.41-.81-.21-1.25 0-1.48L23 6.93a1.13 1.13 0 011-.61h.41l3.75 1.31a2.08 2.08 0 011.13 2.61 34.57 34.57 0 01-7.39 11.23 31.27 31.27 0 01-11.16 7.43 2 2 0 01-.88.22zM12 19.83a.57.57 0 00-.39.18l-4.08 3.13a.55.55 0 00-.26.67l1.32 3.8a1.41 1.41 0 00.8.91 1.33 1.33 0 001.13-.07 31 31 0 0011-7.32 33.8 33.8 0 007.27-11.06 1.57 1.57 0 00-.84-2l-3.69-1.25H24a.64.64 0 00-.59.35l-3.14 4.13c-.19.2-.18.49 0 .89l2.09 2.57a.26.26 0 010 .27 18 18 0 01-3.14 4.16 15.54 15.54 0 01-4 3 .27.27 0 01-.26 0L12.42 20a.6.6 0 00-.41-.19zM23.16 7.06zM6.88 15.82a.25.25 0 01-.25-.25v-1a8.65 8.65 0 018.72-8.76.25.25 0 01.25.25.26.26 0 01-.25.25 8.15 8.15 0 00-8.22 8.26v1a.25.25 0 01-.25.25z"/><path d="M2 16.64a.25.25 0 01-.25-.25v-1.47A14.15 14.15 0 0115.83.75a.25.25 0 010 .5A13.64 13.64 0 002.25 14.92v1.47a.25.25 0 01-.25.25z"/></symbol><symbol viewBox="0 0 30 30" id="contacts-3" xmlns="http://www.w3.org/2000/svg"><path d="M26.7 27.53H3.3a.26.26 0 01-.22-.13.25.25 0 010-.25l3.47-5.41a.24.24 0 01.21-.11h3.29a.25.25 0 010 .5H6.91L3.76 27h22.52l-2.68-4.9h-3.49a.25.25 0 010-.5h3.64a.25.25 0 01.22.13l3 5.4a.25.25 0 010 .25.22.22 0 01-.27.15z"/><path d="M14.92 23.61a1 1 0 01-.7-.33l-5.37-5.41a8.6 8.6 0 01-2.5-7.72A8.8 8.8 0 0113.13 3a8.49 8.49 0 017.19 1.59 9 9 0 013.51 6.84A8.74 8.74 0 0121 17.88l-5.37 5.39a1 1 0 01-.71.34zm.16-20.35a8.31 8.31 0 00-1.84.21 8.28 8.28 0 00-6.39 6.76 8.11 8.11 0 002.35 7.29l5.37 5.4a.41.41 0 00.69 0l5.37-5.4a8.24 8.24 0 002.7-6.1A8.45 8.45 0 0020 5a8 8 0 00-4.92-1.74zm-1.9 0zm1.74 11.93a3.55 3.55 0 01-3.55-3.56A3.44 3.44 0 0114.92 8a3.56 3.56 0 013.54 3.56 3.43 3.43 0 01-3.54 3.59zm0-6.62a3 3 0 00-3.05 3.06 3.06 3.06 0 003.05 3.06 3 3 0 003-3.06 3.06 3.06 0 00-3-3.1z"/></symbol><symbol viewBox="0 0 24.4 18.4" id="medium-arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M24.21 8.79a9.24 9.24 0 01-6.15-2.56 8.47 8.47 0 01-2.52-6V0h-.93v.2a9.56 9.56 0 00.54 3.11 9.37 9.37 0 004.93 5.43H0v.92h20.08a9.36 9.36 0 00-4.88 5.43 9.05 9.05 0 00-.54 3.11v.2h.93v-.2a8.5 8.5 0 018.32-8.49h.49v-.92z"/></symbol></svg>    </div>
+
+    <div class="page-content">
+        <header class="page-header">
+            <div class="container">
+                <div class="page-header__row">
+                    <button class="page-header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <nav class="page-header__nav">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Разряды
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    апартаменты
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    spa
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="page-header__order-link">
+                        забронировать
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#medium-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>        <main class="page-main">
+
+
+<section class="intro js-intro">
+    <div class="intro__bg">
+        <div class="intro__parallax-wrapper">
+            <div class="intro__bg-slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/intro/1.jpg" alt="" class="intro__bg-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/intro/2.jpg" alt="" class="intro__bg-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/intro/3.jpg" alt="" class="intro__bg-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/intro/4.jpg" alt="" class="intro__bg-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="intro__content">
+            <div class="intro__content-slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="intro__content-slider-card">
+                                <img src="img/image-logo.svg" alt="" class="intro__content-slider-card-logo">
+                                <h3 class="intro__content-slider-card-title">
+                                    Жар-птица
+                                </h3>
+                                <div class="intro__content-slider-card-text">
+                                    <p>
+                                        действительно сказочные бани
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="intro__content-slider-card">
+                                <img src="img/image-logo.svg" alt="" class="intro__content-slider-card-logo">
+                                <h3 class="intro__content-slider-card-title">
+                                    Общественные бани
+                                </h3>
+                                <div class="intro__content-slider-card-text">
+                                    <p>
+                                        Мужской и женский разряды с выходом в общую зону
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="intro__content-slider-card">
+                                <img src="img/image-logo.svg" alt="" class="intro__content-slider-card-logo">
+                                <h3 class="intro__content-slider-card-title">
+                                    Банные апартаменты
+                                </h3>
+                                <div class="intro__content-slider-card-text">
+                                    <p>
+                                        Индивидуальные банные апартаменты до 10 гостей
+                                        для уединенного отдыха
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="intro__content-slider-card">
+                                <img src="img/image-logo.svg" alt="" class="intro__content-slider-card-logo">
+                                <h3 class="intro__content-slider-card-title">
+                                    SPA Услуги
+                                </h3>
+                                <div class="intro__content-slider-card-text">
+                                    <p>
+                                        Авторские парения, пилинги, массажи и не только —
+                                        с заботой о вашем теле и вниманием к деталям
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__controls">
+                <div class="intro__contacts">
+                    <ul class="intro__contacts-list">
+                        <li class="intro__contacts-list-item">
+                            <a href="#" class="intro__contacts-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-contacts-1">
+                                    <use xlink:href="#contacts-1"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="intro__contacts-list-item">
+                            <a href="#" class="intro__contacts-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-contacts-2">
+                                    <use xlink:href="#contacts-2"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="intro__contacts-list-item">
+                            <a href="#" class="intro__contacts-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-contacts-3">
+                                    <use xlink:href="#contacts-3"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="intro__pagination">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="spa">
+    <div class="spa__image-wrapper">
+        <div class="spa__parallax-wrapper">
+            <img src="img/spa.jpg" alt="" class="spa__image">
+        </div>
+    </div>
+    <div class="spa__main-wrapper">
+
+
+        <div class="container">
+            <div class="spa__content">
+                <h2 class="spa__heading">
+                    spa услуги
+                </h2>
+                <div class="spa__text">
+                    <p>
+                        У нас вы сможете насладиться авторскими и традиционными парениями, массажами, а также посетить
+                        соляную комнату, хаммам, травяную бочку и другие зоны. Процедурные кабинеты рассредоточены по
+                        территории,
+                        поэтому SPA-услуги доступны посетителям всех разрядов.
+                    </p>
+                </div>
+                <ul class="spa__list">
+                    <li class="spa__list-item">
+                        Парения
+                    </li>
+                    <li class="spa__list-item">
+                        Пилинг
+                    </li>
+                    <li class="spa__list-item">
+                        Массаж
+                    </li>
+                </ul>
+                <a href="#" class="spa__link">
+                    Все услуги
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery">
+    <div class="container">
+        <div class="gallery__slider js-gallery-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery__slider-card gallery__slider-card--type-1">
+                            <img src="img/gallery/1.jpg" alt="" class="gallery__slider-card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery__slider-card gallery__slider-card--type-2">
+                            <img src="img/gallery/2.jpg" alt="" class="gallery__slider-card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery__slider-card gallery__slider-card--type-3">
+                            <img src="img/gallery/3.jpg" alt="" class="gallery__slider-card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery__slider-card gallery__slider-card--type-1">
+                            <img src="img/gallery/4.jpg" alt="" class="gallery__slider-card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery__slider-card gallery__slider-card--type-2">
+                            <img src="img/gallery/5.jpg" alt="" class="gallery__slider-card-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="subscribe">
+    <div class="container">
+        <div class="subscribe__content">
+            <img src="img/image-logo.svg" alt="" class="subscribe__logo">
+            <h4 class="subscribe__heading">
+                Подписаться на рассылку
+            </h4>
+            <div class="subscribe__heading-text">
+                <p>
+                    Чтобы не пропустить классные акции и предложения
+                </p>
+            </div>
+            <form action="/" method="POST" class="subscribe__form">
+                <div class="subscribe__form-row">
+                    <input type="email" name="email" class="subscribe__form-input" required="" placeholder="Email">
+                    <button class="subscribe__form-submit" type="submit">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="page-footer__top-row">
+                    <nav class="page-footer__nav">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    О комплексе
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            О нас
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Цены
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Галерея
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Спецпредложения
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Документы
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Контакты
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Подарочные сертификаты
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Личный кабинет
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Вход
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Регистрация
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Программа лояльности
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Разряды
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Общая зона
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Мужской разряд
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Женский разряд
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Апартаменты
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            ДИСКО
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            АЗИЯ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            ПЛЕС
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            СКАНДИНАВИЯ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            СССР
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            ШАЛЕ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Spa услуги
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Парения
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Отвары для пара
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Перины для полки
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Мыльный массаж
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Пилинг
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Обряды для стоп
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Горячие чаны
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Массаж
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Всё для бани
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Веники и запарки
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Принадлежности
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Уход за телом и волосами
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="page-footer__contacts">
+                        <h4 class="page-footer__contacts-title">
+                            Контакты
+                        </h4>
+                        <div class="page-footer__contacts-content">
+                            <a href="tel:+7 981 334 22 22">+7 981 334 22 22</a><br>
+                            <a href="mailto:baths@gmail.com">baths@gmail.com</a><br><br><br>
+        
+                            г. Москва,<br>
+                            Нижняя Масловка, 15<br><br><br>
+        
+                            Ежедневно 8:00-23:00
+                        </div>
+                        <ul class="page-footer__social-list">
+                            <li class="page-footer__social-list-item">
+                                <a href="#" class="page-footer__social-link">
+                                    <img src="img/social/facebook.svg" alt="" class="page-footer__social-link-icon">
+                                </a>
+                            </li>
+                            <li class="page-footer__social-list-item">
+                                <a href="#" class="page-footer__social-link">
+                                    <img src="img/social/telegram.svg" alt="" class="page-footer__social-link-icon">
+                                </a>
+                            </li>
+                            <li class="page-footer__social-list-item">
+                                <a href="#" class="page-footer__social-link">
+                                    <img src="img/social/vkontakte.svg" alt="" class="page-footer__social-link-icon">
+                                </a>
+                            </li>
+                            <li class="page-footer__social-list-item">
+                                <a href="#" class="page-footer__social-link">
+                                    <img src="img/social/instagram.svg" alt="" class="page-footer__social-link-icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-footer__arrow-wrapper">
+                    <button class="page-footer__arrow-up">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-up">
+                            <use xlink:href="#arrow-up"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="page-footer__bottom-row">
+                    <div class="page-footer__bottom-links">
+                        <a href="#" class="page-footer__bottom-link">
+                            Реквизиты
+                        </a>
+                        <a href="#" class="page-footer__bottom-link">
+                            Политика конфидициальности
+                        </a>
+                        <a href="#" class="page-footer__bottom-link">
+                            Способ оплаты
+                        </a>
+                    </div>
+                    <div class="page-footer__copyright">
+                        © 2022 ЖАР ПТИЦА Все права защищены.
+                    </div>
+                </div>
+        
+            </div>
+        </footer>        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+    </div>
+</body>
+
+</html>

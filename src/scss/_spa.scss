@@ -1,0 +1,156 @@
+.spa {
+
+
+}
+
+.spa__content {
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.spa__main-wrapper {
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        right: 0;
+        bottom: 0;
+        width: 26.6rem;
+        height: 47.5rem;
+        background-image: url('../img/spa-right-pattern.svg');
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &::before {
+        content: '';
+        width: 29.2rem;
+        height: 61rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-image: url('../img/spa-left-pattern.svg');
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -1;
+
+    }
+}
+
+.spa__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: var(--zhar-ptitza);
+}
+
+.spa__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 140%;
+    max-width: 75rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+}
+
+.spa__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.spa__list-item {
+    border: 1px solid #ead7ca;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    gap: 0.6rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    &::before {
+        content: '';
+        width: 1.4rem;
+        height: 1.4rem;
+        background-image: url('../img/diamond-shape-black.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+    }
+   
+}
+
+.spa__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 1.4rem 2.8rem;
+    width: 27rem;
+    background: #000000;
+    color: white;
+    transition: background-color .2s, color .2s;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+
+.spa__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    z-index: 10;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 35%;
+    }
+}
+
+.spa__parallax-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.spa__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
