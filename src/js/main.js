@@ -15,6 +15,7 @@ import intro from './intro';
 import news from './news';
 import apartments from './apartments';
 import maps from './maps';
+import header from './header';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     news();
     apartments();
     maps();
+    header();
 });
 
 document.addEventListener('lazyloaded', () => {
