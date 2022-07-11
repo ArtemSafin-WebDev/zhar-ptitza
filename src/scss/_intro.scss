@@ -98,40 +98,49 @@
 .intro__contacts-link {
     width: 6rem;
     height: 6rem;
-    border-bottom: 1px solid rgba(#3a241f, 0.23);
+    border-top: 1px solid #BBAE9B;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #e2d8c0;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color .2s;
 
     svg {
         width: 3rem;
         height: 3rem;
-        fill: #3a241f;
-        transition: fill 0.2s;
+     
+        transition: fill 0.2s, stroke .2s;
+      
+
+        stroke: #3A241F;
+        stroke-width: 1px;
     }
 
     .intro__contacts-list-item:first-child & {
         border-top-left-radius: 3rem;
         border-top-right-radius: 3rem;
         padding-top: 0.5rem;
+        border: none;
     }
     .intro__contacts-list-item:last-child & {
         border-bottom-left-radius: 3rem;
         border-bottom-right-radius: 3rem;
-        border: none;
+       
         padding-bottom: 0.5rem;
     }
 
     .no-touch &:hover,
     .touch &:active {
-        // background-color: #bfaf88;
-
+        background-color: #BBAE9B;
+        border-color: #BBAE9B;
         // svg {
         //     fill: #e2d8c0;
         // }
+
+        svg {
+            stroke: white;
+        }
     }
 }
 

@@ -1,0 +1,126 @@
+.zone {
+    padding-bottom: 10rem;
+}
+
+.zone__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--zhar-ptitza);
+    margin-bottom: 1rem;
+}
+
+.zone__heading-text {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    max-width: 60rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 140%;
+}
+
+.zone__image-wrapper {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%) translateZ(0);
+    overflow: hidden;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+
+    &::before {
+        content: '';
+        padding-bottom: 40%;
+        display: block;
+    }
+}
+
+.zone__image-parallax-wrapper {
+    position: absolute;
+    inset: 0;
+}
+
+.zone__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zone__features-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    row-gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.zone__features-list-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 140%;
+
+    &::before {
+        content: '';
+        flex-shrink: 0;
+        width: 1.4rem;
+        height: 1.4rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../img/diamond-shape-black.svg');
+        flex-shrink: 0;
+    }
+}
+
+.zone__btns {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    max-width: 56rem;
+}
+
+.zone__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    padding: 1.4rem 2.8rem;
+    color: #000000;
+    &:link,
+    &:visited {
+        color: black;
+    }
+
+    &--filled {
+        background-color: #000;
+        color: #fff;
+        font-weight: 700;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
+}

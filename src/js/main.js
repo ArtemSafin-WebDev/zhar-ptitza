@@ -12,6 +12,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gallerySlider from './gallerySlider';
 import intro from './intro';
+import news from './news';
+import apartments from './apartments';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
     menu();
     gallerySlider();
     intro();
+    news();
+    apartments();
 });
 
 document.addEventListener('lazyloaded', () => {

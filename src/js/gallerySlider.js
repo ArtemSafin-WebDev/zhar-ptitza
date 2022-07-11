@@ -14,12 +14,13 @@ export default function gallerySlider() {
             loop: true,
             loopedSlides: 15,
             watchOverflow: true,
-            speed: 3500,
-            allowTouchMove: false,
-            autoplay: {
-                delay: 0,
-                disableOnInteraction: false
-            }
+            speed: 700,
+            // speed: 3500,
+            // allowTouchMove: false,
+            // autoplay: {
+            //     delay: 0,
+            //     disableOnInteraction: true
+            // }
         });
     });
 }

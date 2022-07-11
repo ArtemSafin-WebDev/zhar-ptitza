@@ -1,6 +1,4 @@
 .spa {
-
-
 }
 
 .spa__content {
@@ -9,7 +7,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-   
 }
 
 .spa__main-wrapper {
@@ -42,7 +39,6 @@
         background-repeat: no-repeat;
         position: absolute;
         z-index: -1;
-
     }
 }
 
@@ -77,6 +73,10 @@
 }
 
 .spa__list-item {
+    flex-shrink: 0;
+}
+
+.spa__item-link {
     border: 1px solid #ead7ca;
     display: inline-flex;
     align-items: center;
@@ -101,7 +101,6 @@
         background-position: center;
         flex-shrink: 0;
     }
-   
 }
 
 .spa__link {
@@ -117,13 +116,12 @@
     width: 27rem;
     background: #000000;
     color: white;
-    transition: background-color .2s, color .2s;
+    transition: background-color 0.2s, color 0.2s;
     &:link,
     &:visited {
         color: white;
     }
 }
-
 
 .spa__image-wrapper {
     position: relative;

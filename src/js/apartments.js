@@ -1,0 +1,27 @@
+import { Swiper, Navigation, EffectFade, Autoplay, Pagination } from 'swiper';
+import { convertRemToPixels } from './utils';
+
+Swiper.use([Navigation, EffectFade, Autoplay, Pagination]);
+
+export default function apartments() {
+    const elements = Array.from(document.querySelectorAll('.js-apartments'));
+
+    elements.forEach(element => {
+        const container = element.querySelector('.swiper');
+
+        new Swiper(container, {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: convertRemToPixels(14),
+            speed: 1000,
+            pagination: {
+                el: element.querySelector('.apartments__slider-pagination'),
+                type: 'fraction'
+            },
+            navigation: {
+                nextEl: element.querySelector('.apartments__slider-arrow--next'),
+                prevEl: element.querySelector('.apartments__slider-arrow--prev')
+            }
+        });
+    });
+}

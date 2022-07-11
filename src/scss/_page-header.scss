@@ -81,6 +81,13 @@
         width: 2.4rem;
         height: 1.8rem;
         fill: currentColor;
-        transition: fill .2s, transform .2s;
+        transition: fill .2s, transform .4s;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        svg {
+            transform: translateX(.3rem);
+        }
     }
 }
