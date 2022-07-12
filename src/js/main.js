@@ -16,6 +16,7 @@ import news from './news';
 import apartments from './apartments';
 import maps from './maps';
 import header from './header';
+import scrollToTop from './scrollToTop';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     apartments();
     maps();
     header();
+    scrollToTop();
 });
 
 document.addEventListener('lazyloaded', () => {
