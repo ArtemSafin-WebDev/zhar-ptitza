@@ -1,6 +1,10 @@
 import { Swiper, Navigation, EffectFade, Autoplay } from 'swiper';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { convertRemToPixels } from './utils';
 
 Swiper.use([Navigation, EffectFade, Autoplay]);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function gallerySlider() {
     const elements = Array.from(document.querySelectorAll('.js-gallery-slider'));
@@ -22,5 +26,26 @@ export default function gallerySlider() {
             //     disableOnInteraction: true
             // }
         });
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+
+        tl.fromTo(element, {
+            x: () => -1 * convertRemToPixels(18)
+        }, {
+            x: () => 1 * convertRemToPixels(18),
+            duration: 0.5
+        })
+
+
+
+
+
     });
 }

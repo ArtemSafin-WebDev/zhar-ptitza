@@ -8,6 +8,7 @@
 
 :root {
     --max-container-width: 138rem;
+    // --max-container-width: 124rem;
     --content-padding: 3rem;
     --primary-color: #EDE8DD;
     --text-color: black;
@@ -18,6 +19,7 @@
 html {
     box-sizing: border-box;
     font-size: 10px;
+    font-size: 9px;
     -webkit-text-size-adjust: 100%;
 
     @include noHighlight();

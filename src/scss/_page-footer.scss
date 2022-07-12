@@ -104,6 +104,19 @@
     font-size: 1.6rem;
     line-height: 150%;
     color: #cec1a3;
+
+    a {
+        background-image: linear-gradient(rgba(white, 1), rgba(white, 1));
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size 0.25s ease-out, color 0.2s;
+
+        &:hover {
+            color: white;
+            background-size: 100% 1px;
+        }
+    }
 }
 
 .page-footer__social-list {
@@ -162,7 +175,6 @@
     &:visited {
         color: #cec1a3;
     }
-
 
     &:hover {
         color: white;
