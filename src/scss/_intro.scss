@@ -2,6 +2,10 @@
     position: relative;
     z-index: 50;
     color: white;
+
+    .container {
+        pointer-events: none;
+    }
 }
 
 .intro__bg {
@@ -13,7 +17,7 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    z-index: -1;
+    // z-index: -1;
 }
 
 .intro__parallax-wrapper {
@@ -70,6 +74,8 @@
 
 .intro__content-slider {
     margin: auto 0;
+    position: relative;
+    z-index: 1;
 }
 
 .intro__controls {
@@ -82,6 +88,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 1.5rem;
+    pointer-events: all;
 }
 
 .intro__contacts-list {
@@ -155,6 +162,7 @@
     justify-content: center;
     width: auto !important;
     gap: 1.8rem;
+    pointer-events: all;
 
     .swiper-pagination-bullet {
         margin: 0 !important;
@@ -194,6 +202,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    user-select: none;
 }
 
 .intro__content-slider-card-logo {
