@@ -2,6 +2,10 @@
     padding-top: 8rem;
     background: #332927;
     color: white;
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+    }
 }
 
 .gallery__slider {
@@ -11,10 +15,13 @@
 
     .swiper-slide {
         width: max-content;
-        margin-right: 7.2rem;
-        &:last-child {
-            margin-right: 0;
+        margin: 0 3.6rem;
+
+        @include breakpoint(mobile) {
+           
+            margin: 0 1.2rem;
         }
+       
     }
 
     // .swiper-wrapper {
@@ -28,6 +35,10 @@
 
     &--type-1 {
         width: 32.8rem;
+
+        @include breakpoint(mobile) {
+            width: 18.9rem;
+        }
         &::before {
             content: '';
             display: block;
@@ -38,6 +49,11 @@
     &--type-2 {
         width: 28rem;
         margin-top: 5.4rem;
+
+        @include breakpoint(mobile) {
+            width: 16.2rem;
+            margin-top: 3rem;
+        }
         &::before {
             content: '';
             display: block;
@@ -48,10 +64,15 @@
     &--type-3 {
         width: 40rem;
         margin-top: 10rem;
+
+        @include breakpoint(mobile) {
+            width: 23.4rem;
+            margin-top: 6rem;
+        }
         &::before {
             content: '';
             display: block;
-            padding-bottom: 56.25%;
+            padding-bottom: 60%;
         }
     }
 }

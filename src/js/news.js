@@ -10,12 +10,18 @@ export default function news() {
         const container = element.querySelector('.swiper');
 
         new Swiper(container, {
-            slidesPerView: 4,
-            spaceBetween: convertRemToPixels(8),
+            slidesPerView: 'auto',
+            spaceBetween: 0,
             speed: 600,
             navigation: {
                 nextEl: element.querySelector('.news__arrows-btn--next'),
                 prevEl: element.querySelector('.news__arrows-btn--prev')
+            },
+            breakpoints: {
+                641: {
+                    slidesPerView: 4,
+                    spaceBetween: convertRemToPixels(8)
+                }
             }
         });
     });

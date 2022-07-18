@@ -37,9 +37,9 @@ export default function gallerySlider() {
         });
 
         tl.fromTo(element, {
-            x: () => -1 * convertRemToPixels(18)
+            x: () => window.matchMedia("(max-width: 640px)").matches ? -1 * convertRemToPixels(4) : -1 * convertRemToPixels(18)
         }, {
-            x: () => 1 * convertRemToPixels(18),
+            x: () => window.matchMedia("(max-width: 640px)").matches ? 1 * convertRemToPixels(4) : 1 * convertRemToPixels(18),
             duration: 0.5
         })
 

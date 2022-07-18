@@ -12,10 +12,13 @@ export default function maps() {
             const center = element.getAttribute('data-center').split(',');
             const coords = element.getAttribute('data-coords').split(',');
             const zoom = element.getAttribute('data-zoom');
+            
 
             const pin = {
-                // preset: 'islands#blueStarCircleIcon',
-                iconColor: 'red'
+                iconLayout: 'default#image',
+                iconImageHref: 'img/pin.svg',
+                iconImageSize: [34, 40],
+                iconImageOffset: [-17, -40]
             };
 
             const mapInstance = new ymaps.Map(mapElement, {

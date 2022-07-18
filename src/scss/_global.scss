@@ -10,10 +10,14 @@
     --max-container-width: 138rem;
     // --max-container-width: 124rem;
     --content-padding: 3rem;
-    --primary-color: #EDE8DD;
+    --primary-color: #ede8dd;
     --text-color: black;
     --zhar-ptitza: 'ZharPtitza', serif;
     --avenir: 'Avenir Next Cyr', sans-serif;
+
+    @include breakpoint(mobile) {
+        --content-padding: 1.5rem;
+    }
 }
 
 html {
@@ -26,6 +30,10 @@ html {
 
     @media screen and (max-width: 1439px) {
         font-size: clamp(4.2px, 0.7vw, 25px);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
     }
 }
 
@@ -181,8 +189,6 @@ th {
     text-align: left;
     vertical-align: top;
 }
-
-
 
 ::selection {
     color: var(--text-color);

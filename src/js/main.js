@@ -17,6 +17,8 @@ import apartments from './apartments';
 import maps from './maps';
 import header from './header';
 import scrollToTop from './scrollToTop';
+import menuImages from './menuImages';
+import footerNav from './footerNav';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     masks();
     validation();
     anchorLinks();
+    footerNav();
     accordions();
     modals();
     tabs();
@@ -37,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     maps();
     header();
     scrollToTop();
+    menuImages();
 });
 
 document.addEventListener('lazyloaded', () => {

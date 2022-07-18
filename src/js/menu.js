@@ -1,12 +1,16 @@
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 
 export default function menu() {
-    const burger = document.querySelector('.page-header__burger');
-    const menu = document.querySelector('.page-header__burger-menu');
+    const burgers = Array.from(document.querySelectorAll('.page-header__burger'));
+    const menu = document.querySelector('.menu');
+
+    const menuClose = document.querySelector('.menu__close');
 
     window.menuOpen = false;
 
-    if (!burger || !menu) return;
+    console.log(menu, burgers);
+
+    if (!burgers.length || !menu) return;
 
     const openMenu = () => {
         if (window.menuOpen) return;
@@ -26,11 +30,19 @@ export default function menu() {
     window.openMenu = openMenu;
     window.closeMenu = closeMenu;
 
-    burger.addEventListener('click', event => {
+    burgers.forEach(burger => {
+        burger.addEventListener('click', event => {
+            event.preventDefault();
+            if (!window.menuOpen) {
+                openMenu();
+            } 
+        });
+    });
+
+    menuClose.addEventListener('click', event => {
         event.preventDefault();
-        if (!window.menuOpen) {
-            openMenu();
-        } else {
+
+        if (window.menuOpen) {
             closeMenu();
         }
     });
