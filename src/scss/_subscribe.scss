@@ -3,6 +3,8 @@
     background: #332927;
     color: white;
     padding-top: 6.4rem;
+    position: relative;
+    z-index: 1;
 
     @include breakpoint(mobile) {
         padding-top: 4rem;

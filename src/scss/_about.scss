@@ -1,6 +1,9 @@
 .about {
     padding-top: 6.2rem;
     padding-bottom: 14rem;
+    position: relative;
+    background-color: #fff;
+    z-index: 1;
 
     @include breakpoint(mobile) {
         padding-top: 4rem;

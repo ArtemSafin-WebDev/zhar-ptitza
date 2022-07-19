@@ -1,6 +1,9 @@
 .contacts {
     padding-top: 1.5rem;
     padding-bottom: 10rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
 
     @include breakpoint(mobile) {
         padding-top: 6.4rem;

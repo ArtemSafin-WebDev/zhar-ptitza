@@ -33,6 +33,10 @@ html {
     }
 
     @include breakpoint(mobile) {
+        font-size: 11px;
+    }
+
+    @include breakpoint(supersmall-mobile) {
         font-size: 10px;
     }
 }

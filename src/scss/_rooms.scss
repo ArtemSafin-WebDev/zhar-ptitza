@@ -1,6 +1,8 @@
 .rooms {
     padding-bottom: 15rem;
-
+    position: relative;
+    background-color: #fff;
+    z-index: 1;
     @include breakpoint(mobile) {
         padding-bottom: 6rem;
     }

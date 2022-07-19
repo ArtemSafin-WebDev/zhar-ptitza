@@ -2,6 +2,11 @@ import { Swiper, Navigation, EffectFade, Autoplay, Controller, Pagination } from
 
 Swiper.use([Navigation, EffectFade, Autoplay, Controller, Pagination]);
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function intro() {
     const elements = Array.from(document.querySelectorAll('.js-intro'));
     elements.forEach(element => {
@@ -29,5 +34,23 @@ export default function intro() {
 
         mainInstance.controller.control = bgSlider;
         bgSlider.controller.control = mainInstance;
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true,
+                pin: '.intro__parallax-wrapper',
+                markers: false,
+                pinSpacing: false
+                
+            }
+        });
+
+        tl.to(element.querySelector('.intro__bg-slider'), {
+            scale: 1.05,
+            duration: 0.4
+        })
     });
 }
