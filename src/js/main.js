@@ -20,6 +20,9 @@ import scrollToTop from './scrollToTop';
 import menuImages from './menuImages';
 import footerNav from './footerNav';
 import parallaxImages from './parallaxImages';
+import headingAnimation from './headingAnimation';
+import apartmentsVideo from './apartmentsVideo';
+import mobileContacts from './mobileContacts';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollToTop();
     menuImages();
     parallaxImages();
+    headingAnimation();
+    apartmentsVideo();
+    mobileContacts();
 });
 
 document.addEventListener('lazyloaded', () => {

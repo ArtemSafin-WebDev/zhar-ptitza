@@ -16,7 +16,7 @@ export default function menu() {
         if (window.menuOpen) return;
         document.body.classList.add('mobile-menu-open');
         disableBodyScroll(menu, {
-            reserveScrollBarGap: true
+            reserveScrollBarGap: false
         });
         window.menuOpen = true;
     };

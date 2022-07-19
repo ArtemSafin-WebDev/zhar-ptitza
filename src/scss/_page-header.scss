@@ -27,9 +27,9 @@
     .modal-open &,
     .mobile-menu-open & {
         padding-right: var(--sb-width, 0);
-        &::before {
-            right: var(--sb-width, 0);
-        }
+        // &::before {
+        //     right: var(--sb-width, 0);
+        // }
     }
 }
 

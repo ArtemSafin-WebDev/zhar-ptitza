@@ -31,6 +31,7 @@
     "lodash": "^4.17.21",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.6.8",
+    "splitting": "^1.0.6",
     "swiper": "^8.1.4"
   },
   "devDependencies": {

@@ -196,6 +196,8 @@
         top: 100%;
         width: 100%;
         background-color: currentColor;
+        transition: transform .2s;
+        transform-origin: left center;
     }
 
     @include breakpoint(mobile) {
@@ -209,6 +211,9 @@
     .no-touch &:hover,
     .touch &:active {
         text-decoration-color: transparent;
+        &::before {
+            transform: scaleX(0);
+        }
     }
 }
 
