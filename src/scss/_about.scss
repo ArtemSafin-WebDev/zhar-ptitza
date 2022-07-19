@@ -82,12 +82,15 @@
 
 .about__image-parallax {
     display: block;
+    // transform-origin: center bottom;
+    // transform: scale(1.2);
 }
 
 .about__image {
     display: block;
     width: 100%;
     height: auto;
+    
 }
 
 .about__text-content {

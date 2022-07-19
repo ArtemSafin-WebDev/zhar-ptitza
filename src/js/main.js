@@ -19,6 +19,7 @@ import header from './header';
 import scrollToTop from './scrollToTop';
 import menuImages from './menuImages';
 import footerNav from './footerNav';
+import parallaxImages from './parallaxImages';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     header();
     scrollToTop();
     menuImages();
+    parallaxImages();
 });
 
 document.addEventListener('lazyloaded', () => {
