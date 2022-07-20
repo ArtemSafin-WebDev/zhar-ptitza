@@ -17,6 +17,12 @@
     text-transform: uppercase;
     font-family: var(--zhar-ptitza);
     margin-bottom: 1rem;
+  
+
+    @include breakpointMF(small-tablet) {
+        opacity: 0;
+        visibility: hidden;
+    }
 
     @include breakpoint(mobile) {
         font-style: normal;
@@ -46,6 +52,13 @@
     }
 }
 
+.zone__image-zoom-wrapper {
+    margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
 .zone__image-wrapper {
     position: relative;
     left: 50%;
@@ -53,14 +66,23 @@
     transform: translateX(-50%) translateZ(0);
     overflow: hidden;
     backface-visibility: hidden;
-    margin-bottom: 3rem;
+   
+    transform-origin: center top;
 
-    @include breakpoint(mobile) {
-        margin-bottom: 2rem;
-    }
+    
 }
 
 .zone__image-parallax-wrapper {
+
+   
+   
+}
+
+.zone__image-zoom-wrapper-inner {
+    @include breakpointMF(small-tablet) {
+        transform-origin: center top;
+        transform: scale(0.5);
+    }
 }
 
 .zone__image {

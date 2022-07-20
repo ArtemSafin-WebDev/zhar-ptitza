@@ -11,7 +11,7 @@ export default function parallaxImages() {
 
         gsap.set(parallaxWrapper, {
             transformOrigin: 'center bottom',
-            scale: 1.3
+            scale: 1.2
         });
 
         const tl = gsap.timeline({
@@ -24,7 +24,7 @@ export default function parallaxImages() {
         });
 
         tl.to(parallaxWrapper, {
-            yPercent: 30,
+            yPercent: 20,
             duration: 0.4
         });
     });

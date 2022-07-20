@@ -23,12 +23,20 @@ import parallaxImages from './parallaxImages';
 import headingAnimation from './headingAnimation';
 import apartmentsVideo from './apartmentsVideo';
 import mobileContacts from './mobileContacts';
+import rooms from './rooms';
+import imagesLoaded from 'imagesloaded';
+import clientHeight from './clientHeight';
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener('DOMContentLoaded', function () {
+window.triggerRefresh = () => {
+    ScrollTrigger.refresh();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
     setScrollbarWidth();
+    clientHeight();
     masks();
     validation();
     anchorLinks();
@@ -49,13 +57,21 @@ document.addEventListener('DOMContentLoaded', function () {
     headingAnimation();
     apartmentsVideo();
     mobileContacts();
+    rooms();
 });
+
+let imgLoad = imagesLoaded(document.querySelector('.page-content'));
+function onAlways() {
+    ScrollTrigger.refresh();
+}
+
+imgLoad.on('always', onAlways);
 
 document.addEventListener('lazyloaded', () => {
     ScrollTrigger.refresh();
 });
 
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     ScrollTrigger.refresh();
     setTimeout(() => document.body.classList.add('animatable'), 300);

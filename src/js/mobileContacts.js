@@ -6,13 +6,13 @@ gsap.registerPlugin(ScrollTrigger);
 export default function mobileContacts() {
     ScrollTrigger.matchMedia({
         '(max-width: 640px)': function() {
-            ScrollTrigger.create({
-                trigger: '.intro',
-                start: 'top top',
-                end: 999999,
-                pin: '.intro__contacts',
-                pinSpacing: false
-            });
+            // ScrollTrigger.create({
+            //     trigger: '.intro',
+            //     start: 'top top',
+            //     end: 999999,
+            //     pin: '.intro__contacts',
+            //     pinSpacing: false
+            // });
 
             const tl = gsap.timeline({
                 scrollTrigger: {

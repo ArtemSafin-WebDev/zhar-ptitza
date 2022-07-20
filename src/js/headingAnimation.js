@@ -32,10 +32,13 @@ export default function headingAnimation() {
                 duration: 0.6
             }, 0)
         } else {
-            gsap.set(lineParent, {
-                overflow: 'hidden'
-            })
 
+            lineParent.forEach(line => {
+                gsap.set(line, {
+                    overflow: 'hidden'
+                })
+            })
+          
             const lineChild = Array.from(header.querySelectorAll('.lineChild'));
 
             const tl = gsap.timeline({
