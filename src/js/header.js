@@ -11,7 +11,7 @@ export default function header() {
 
     ScrollTrigger.create({
         trigger: changeColorBlock,
-        start: () => `top+=${header.offsetHeight} top`,
+        start: () => `bottom-=${header.offsetHeight} top`,
         markers: false,
         onEnter: () => {
             header.classList.add('fixed')

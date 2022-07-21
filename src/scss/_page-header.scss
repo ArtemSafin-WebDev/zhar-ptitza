@@ -67,6 +67,16 @@
             opacity: 1;
         }
 
+        @include breakpointMF(small-tablet) {
+            .page-header__order-link {
+                &:hover {
+                    color: white;
+                    background-color: black;
+                    border-color: black;
+                }
+            }
+        }
+
         @include breakpoint(mobile) {
             .page-header__order-link {
                 display: none;
@@ -212,7 +222,7 @@
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     display: inline-flex;
     align-items: center;
-
+    color: white;
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 700;
@@ -240,8 +250,10 @@
         }
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
+        background-color: white;
+        color: var(--text-color);
+        border-color: white;
         svg {
             transform: translateX(0.3rem);
         }

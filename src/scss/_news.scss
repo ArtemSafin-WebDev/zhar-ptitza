@@ -97,6 +97,14 @@
 .news__slider-card {
     display: flex;
     flex-direction: column;
+
+    .no-touch &:hover {
+        .news__slider-card-link {
+            svg {
+                transform: translateX(.3rem);
+            }
+        }
+    }
 }
 
 .news__slider-card-image-container {

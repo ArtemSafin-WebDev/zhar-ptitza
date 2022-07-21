@@ -38,12 +38,12 @@ export default function rooms() {
                             const tl = gsap.timeline();
                             tl.to(title, {
                                 autoAlpha: 0,
-                                duration: 0.4
+                                duration: 0.1
                             }).to(
                                 zoneTitle,
                                 {
                                     autoAlpha: 1,
-                                    duration: 0.4
+                                    duration: 0.1
                                 },
                                 '<'
                             );
@@ -52,12 +52,12 @@ export default function rooms() {
                             const tl = gsap.timeline();
                             tl.to(title, {
                                 autoAlpha: 1,
-                                duration: 0.4
+                                duration: 0.1
                             }).to(
                                 zoneTitle,
                                 {
                                     autoAlpha: 0,
-                                    duration: 0.4
+                                    duration: 0.1
                                 },
                                 '<'
                             );

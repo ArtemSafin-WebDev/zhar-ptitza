@@ -1,4 +1,7 @@
+import { IS_MOBILE } from "./utils";
+
 export default function footerNav() {
+    if (!IS_MOBILE) return;
     const navItems = Array.from(document.querySelectorAll('.page-footer__nav > ul > li'));
 
     navItems.forEach(item => {

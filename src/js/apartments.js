@@ -25,7 +25,7 @@ export default function apartments() {
             breakpoints: {
                 641: {
                     slidesPerView: 2,
-                    slidesPerGroup: 2,
+                    slidesPerGroup: 1,
                     spaceBetween: convertRemToPixels(14)
                 }
             }
