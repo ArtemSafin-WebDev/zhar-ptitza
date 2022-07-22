@@ -43,12 +43,18 @@
     font-size: 1.4rem;
     line-height: 140%;
 
+    @include breakpointMF(small-tablet) {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 150%;
         margin-bottom: 2rem;
+      
     }
 }
 

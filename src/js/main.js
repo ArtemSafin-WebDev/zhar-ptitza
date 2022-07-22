@@ -29,6 +29,8 @@ import clientHeight from './clientHeight';
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 window.triggerRefresh = () => {
     ScrollTrigger.refresh();
 };

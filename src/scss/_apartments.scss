@@ -58,6 +58,8 @@
         .swiper-slide {
             width: 27.7rem;
             margin-right: 1.3rem;
+
+            width: 90%;
             &:last-child {
                 margin-right: 0;
             }
@@ -68,6 +70,10 @@
 .apartments__slider-card {
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        flex-grow: 1;
+    }
 }
 
 .apartments__slider-card-image-container {
@@ -223,6 +229,7 @@
     @include breakpoint(mobile) {
         grid-gap: 1rem;
         grid-template-columns: minmax(0, 1fr);
+        margin: 0;
     }
 }
 
@@ -360,6 +367,7 @@
         line-height: 120%;
         gap: 1.1rem;
         margin-bottom: 2rem;
+        margin-top: auto;
     }
 
     svg {

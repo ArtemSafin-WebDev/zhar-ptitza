@@ -20,6 +20,7 @@ export default function rooms() {
                 const cardContent = card.querySelector('.rooms__card-content');
                 const title = card.querySelector('.rooms__card-title');
                 const zoneTitle = document.querySelector('.zone__heading');
+                const zoneHeadingText = document.querySelector('.zone__heading-text')
                 const zoneZoomWrapper = document.querySelector('.zone__image-zoom-wrapper');
                 const zoneZoomWrapperInner = document.querySelector('.zone__image-zoom-wrapper-inner');
                 const zone = document.querySelector('.zone');
@@ -34,33 +35,40 @@ export default function rooms() {
                         pinSpacing: false,
                         scrub: true,
                         markers: false,
+                        anticipatePin: 1,
                         onLeave: () => {
                             const tl = gsap.timeline();
                             tl.to(title, {
                                 autoAlpha: 0,
-                                duration: 0.1
+                                duration: 0
                             }).to(
                                 zoneTitle,
                                 {
                                     autoAlpha: 1,
-                                    duration: 0.1
+                                    duration: 0
                                 },
                                 '<'
-                            );
+                            ).to(zoneHeadingText, {
+                                autoAlpha: 1,
+                                duration: 0.3
+                            }, '<')
                         },
                         onEnterBack: () => {
                             const tl = gsap.timeline();
                             tl.to(title, {
                                 autoAlpha: 1,
-                                duration: 0.1
+                                duration: 0
                             }).to(
                                 zoneTitle,
                                 {
                                     autoAlpha: 0,
-                                    duration: 0.1
+                                    duration: 0
                                 },
                                 '<'
-                            );
+                            ).to(zoneHeadingText, {
+                                autoAlpha: 0,
+                                duration: 0.3
+                            }, '<')
                         }
                     }
                 });
@@ -68,7 +76,7 @@ export default function rooms() {
                 tl.to(
                     title,
                     {
-                        xPercent: cardIndex === 0 ? 60 : -60,
+                        xPercent: cardIndex === 0 ? 32 : -32,
                         // autoAlpha: 0,
                         duration: 2
                     },
