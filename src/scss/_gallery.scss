@@ -8,6 +8,19 @@
     @include breakpoint(mobile) {
         padding-top: 3rem;
     }
+
+    .spa + & {
+        background: white;
+        color: var(--text-color);
+        padding-top: 2.2rem;
+        padding-bottom: 16rem;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 9rem;
+        }
+    }
+
+   
 }
 
 .gallery__slider {

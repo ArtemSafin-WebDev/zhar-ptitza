@@ -83,6 +83,7 @@
     position: relative;
     overflow: hidden;
     backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .about__image-parallax {

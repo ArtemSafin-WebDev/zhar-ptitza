@@ -4,9 +4,17 @@
     position: relative;
     z-index: 1;
 
+    .rooms + & {
+        padding-top: 0;
+    }
+
     @include breakpoint(mobile) {
         padding-top: 4rem;
         padding-bottom: 4rem;
+
+        .rooms + & {
+            padding-top: 0;
+        }
     }
 }
 
@@ -37,6 +45,10 @@
         line-height: 1.1;
         margin-bottom: 3rem;
         color: #000000;
+        text-align: center;
+        font-size: 3.8rem;
+        line-height: 1;
+        margin-bottom: 1.7rem;
     }
 }
 

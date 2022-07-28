@@ -5,7 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function rooms() {
     const rooms = document.querySelector('.rooms');
-    if (!rooms) return;
+    const zone = document.querySelector('.zone');
+    if (!rooms || !zone) return;
 
     const roomsCards = Array.from(document.querySelectorAll('.rooms__card'));
 
@@ -16,6 +17,7 @@ export default function rooms() {
     ScrollTrigger.matchMedia({
         '(min-width: 641px)': function() {
             roomsCards.forEach((card, cardIndex) => {
+                
                 const contentWrapper = card.querySelector('.rooms__card-content-wrapper');
                 const cardContent = card.querySelector('.rooms__card-content');
                 const title = card.querySelector('.rooms__card-title');
@@ -23,7 +25,7 @@ export default function rooms() {
                 const zoneHeadingText = document.querySelector('.zone__heading-text')
                 const zoneZoomWrapper = document.querySelector('.zone__image-zoom-wrapper');
                 const zoneZoomWrapperInner = document.querySelector('.zone__image-zoom-wrapper-inner');
-                const zone = document.querySelector('.zone');
+                
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: card,

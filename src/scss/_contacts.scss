@@ -5,9 +5,19 @@
     position: relative;
     z-index: 1;
 
+    
+
+    .news + & {
+        padding-top: 4rem;
+    }
+
     @include breakpoint(mobile) {
         padding-top: 6.4rem;
         padding-bottom: 4.4rem;
+
+        .news + & {
+            padding-top: 0;
+        }
     }
 }
 .contacts__content {

@@ -13,7 +13,7 @@ export default function headingAnimation() {
 
         const lineParent = Array.from(header.querySelectorAll('.lineParent'));
 
-        if (lineParent.length === 2 && !window.matchMedia("(max-width: 640px)").matches) {
+        if (lineParent.length === 2 && header.matches('.news__heading, .apartments__heading')) {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: header,

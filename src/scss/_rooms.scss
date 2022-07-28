@@ -6,6 +6,10 @@
 
 
     padding-bottom: 30rem;
+
+    &--short-padding {
+        padding-bottom: 15rem;
+    }
     @include breakpoint(mobile) {
         padding-bottom: 6rem;
     }
