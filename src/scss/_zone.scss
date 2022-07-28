@@ -20,8 +20,12 @@
   
 
     @include breakpointMF(small-tablet) {
-        opacity: 0;
-        visibility: hidden;
+        
+
+        .rooms + .zone & {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -44,8 +48,12 @@
     line-height: 140%;
 
     @include breakpointMF(small-tablet) {
-        opacity: 0;
-        visibility: hidden;
+      
+
+        .rooms + .zone & {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -86,8 +94,12 @@
 
 .zone__image-zoom-wrapper-inner {
     @include breakpointMF(small-tablet) {
-        transform-origin: center top;
-        transform: scale(0.5);
+      
+
+        .rooms + .zone & {
+            transform-origin: center top;
+            transform: scale(0.5);
+        } 
     }
 }
 

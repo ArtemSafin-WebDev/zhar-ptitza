@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { IS_MOBILE } from './utils';
 import SplitText from './vendor/SplitText';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -13,7 +14,7 @@ export default function headingAnimation() {
 
         const lineParent = Array.from(header.querySelectorAll('.lineParent'));
 
-        if (lineParent.length === 2 && header.matches('.news__heading, .apartments__heading')) {
+        if (lineParent.length === 2 && (header.matches('.news__heading, .apartments__heading') || (header.matches('.bath-rest__heading--mobile-centered') && IS_MOBILE))) {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: header,

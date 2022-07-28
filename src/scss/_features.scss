@@ -5,6 +5,14 @@
     background-color: #fff;
     z-index: 1;
 
+    .bath-rest + & {
+        padding-top: 13rem;
+
+        @include breakpoint(mobile) {
+            padding-top: 5rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding-bottom: 6rem;
     }
