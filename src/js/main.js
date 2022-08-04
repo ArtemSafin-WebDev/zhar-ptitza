@@ -30,6 +30,7 @@ import bathsSlider from './bathsSlider';
 import restTogetherSlider from './restTogetherSlider';
 import featuresSlider from './featuresSlider';
 import bathRestSlider from './bathRestSlider';
+import roomSlider from './roomSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     restTogetherSlider();
     featuresSlider();
     bathRestSlider();
+    roomSlider();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));

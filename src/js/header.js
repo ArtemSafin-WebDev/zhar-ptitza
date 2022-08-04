@@ -7,7 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default function header() {
     const header = document.querySelector('.page-header');
     const changeColorBlock = document.querySelector('.js-change-header-color');
-    if (!header || !changeColorBlock) return;
+    if (!header || !changeColorBlock || header.classList.contains('fixed')) return;
+
+    
 
     ScrollTrigger.create({
         trigger: changeColorBlock,
