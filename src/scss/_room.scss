@@ -7,7 +7,7 @@
 
     @include breakpoint(mobile) {
         padding-top: 5rem;
-        padding-bottom: 4.5rem;
+        padding-bottom: 6.5rem;
     }
 }
 
@@ -233,7 +233,7 @@
     flex-wrap: wrap;
     gap: 7.2rem;
     row-gap: 3rem;
-    margin-left: 5rem;
+    margin-left: 11rem;
     margin-top: 3rem;
 
     @include breakpoint(mobile) {

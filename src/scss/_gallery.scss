@@ -5,16 +5,16 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+    }
+
     &:last-child {
         padding-bottom: 6rem;
 
         @include breakpoint(mobile) {
             padding-bottom: 3rem;
         }
-    }
-
-    @include breakpoint(mobile) {
-        padding-top: 3rem;
     }
 
     .spa + & {
@@ -25,8 +25,13 @@
 
         @include breakpoint(mobile) {
             padding-bottom: 9rem;
+            padding-top: 6rem;
         }
     }
+
+   
+
+   
 
    
 }

@@ -16,6 +16,10 @@
         padding-bottom: 4.4rem;
 
         .news + & {
+            padding-top: 1rem;
+        }
+
+        .gallery + & {
             padding-top: 0;
         }
     }
