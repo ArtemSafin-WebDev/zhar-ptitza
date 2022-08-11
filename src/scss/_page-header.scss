@@ -96,7 +96,8 @@
         }
     }
 
-    .page-header.fixed & {
+    .page-header.fixed &,
+    .page-header.dark & {
         &:nth-child(1) {
             clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
         }
