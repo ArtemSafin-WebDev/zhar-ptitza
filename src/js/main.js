@@ -32,6 +32,9 @@ import featuresSlider from './featuresSlider';
 import bathRestSlider from './bathRestSlider';
 import roomSlider from './roomSlider';
 import spaSlider from './spaSlider';
+import datepicker from './datepicker';
+import timeDropdown from './timeDropdown';
+import ticketsAmount from './ticketsAmount';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,6 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
     bathRestSlider();
     roomSlider();
     spaSlider();
+    datepicker();
+    timeDropdown();
+    ticketsAmount();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));
