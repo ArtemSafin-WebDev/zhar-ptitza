@@ -18,6 +18,10 @@
     padding: 3rem 11.8rem;
     padding-bottom: 3rem;
 
+    &--wide {
+        max-width: 116.4rem;
+    }
+
     &--success {
         max-width: 116.4rem;
         display: flex;
@@ -49,6 +53,8 @@
     margin-bottom: 1.8rem;
     font-family: var(--zhar-ptitza);
     color: #3a241f;
+    
+    
 
     @include breakpoint(mobile) {
         font-style: normal;
@@ -67,13 +73,16 @@
     font-size: 1.6rem;
     line-height: 140%;
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 4rem;
-
+    max-width: 43rem;
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 140%;
+        margin: 0;
+        max-width: none;
         margin-bottom: 3rem;
     }
 }
