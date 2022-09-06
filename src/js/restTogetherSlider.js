@@ -8,7 +8,7 @@ export default function restTogetherSlider() {
         const container = element.querySelector('.swiper');
 
         new Swiper(container, {
-            speed: 500,
+            speed: 800,
             slidesPerView: 'auto',
             centeredSlides: true,
             spaceBetween: 12,

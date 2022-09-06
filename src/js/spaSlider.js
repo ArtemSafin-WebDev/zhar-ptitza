@@ -12,6 +12,7 @@ export default function spaSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             spaceBetween: 0,
+            speed: 600,
             navigation: {
                 nextEl: element.querySelector('.spa-slider__arrow--next'),
                 prevEl: element.querySelector('.spa-slider__arrow--prev')

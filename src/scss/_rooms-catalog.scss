@@ -119,6 +119,13 @@
 .rooms-catalog__arrow {
     align-self: center;
     margin-top: 6.5rem;
+   
+    .no-touch &:hover {
+        svg {
+            transform: scaleY(-1) translateY(-.2rem);
+        }
+    }
+
 
     @include breakpoint(mobile) {
         margin-top: 3.5rem;
@@ -129,7 +136,7 @@
         display: block;
         fill: black;
         transform: scaleY(-1);
-
+        transition: transform .2s;
         @include breakpoint(mobile) {
             width: 3.6rem;
             height: 4.9rem;

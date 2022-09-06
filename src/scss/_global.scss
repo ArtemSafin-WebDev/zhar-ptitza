@@ -26,8 +26,6 @@ html {
     font-size: 9px;
     -webkit-text-size-adjust: 100%;
 
-  
-
     @include noHighlight();
 
     @media screen and (max-width: 1439px) {
@@ -221,4 +219,30 @@ select:-webkit-autofill:focus {
 }
 [class*='ymaps-2'][class*='-copyrights-pane'] {
     display: none;
+}
+
+.apartments__slider-card-image-container,
+.rooms-catalog__card-image-container {
+    @include breakpoint(mobile) {
+        &::after {
+            content: '';
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 10;
+            transition: opacity 0.2s;
+            background-image: url('../img/play.svg');
+        }
+
+        &.video-shown {
+            &::after {
+                background-image: url('../img/pause.svg');
+            }
+        }
+    }
 }

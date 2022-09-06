@@ -318,6 +318,12 @@ textarea.form-page__form-input {
 
 .form-page__social-link {
     display: block;
+
+    .no-touch &:hover {
+        .form-page__social-link-icon {
+            transform: scale(1.2);
+        }
+    }
 }
 
 .form-page__social-link-icon {
@@ -326,6 +332,7 @@ textarea.form-page__form-input {
     display: block;
     max-width: none;
     object-fit: contain;
+    transition: transform .4s;
 
     @include breakpoint(mobile) {
         height: 2.2rem;

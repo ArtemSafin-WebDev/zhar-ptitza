@@ -14,5 +14,19 @@ export default function apartmentsVideo() {
             video.pause();
             element.classList.remove('video-shown')
         })
+
+
+        element.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (video.playing) {
+                video.pause();
+                element.classList.remove('video-shown')
+            } else {
+                video.pause();
+                video.currentTime = 0;
+                video.play();
+                element.classList.add('video-shown')
+            }
+        })
     })
 }

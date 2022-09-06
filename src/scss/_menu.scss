@@ -80,22 +80,28 @@
     @include breakpoint(mobile) {
         display: none;
     }
-    text {
-        fill: #3a241f;
-        font-family: var(--zhar-ptitza);
+    // text {
+    //     fill: #3a241f;
+    //     font-family: var(--zhar-ptitza);
 
-        font-weight: 700;
+    //     font-weight: 700;
 
-        font-size: 8rem;
-        text-transform: uppercase;
-        // letter-spacing: 2.5px;
-    }
+    //     font-size: 8rem;
+    //     text-transform: uppercase;
+        
+    // }
 
     svg {
         display: block;
         width: 100%;
         height: 100%;
     }
+}
+
+.menu__rotating-text-image {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes textRotating {

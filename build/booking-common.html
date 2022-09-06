@@ -312,16 +312,7 @@
         
                         </div>
                         <div class="menu__rotating-text">
-                            <svg class="circleText" viewBox="0 0 500 500" data-duration="5">
-                                <path id="textcircle" fill="none"
-                                    d="M415.25,250A165.25,165.25,0,1,1,250,84.75,165.26,165.26,0,0,1,415.25,250Z" />
-                                <text dy="-25">
-                                    <textPath xlink:href="#textcircle">
-                                        Чудо пар Бани для всех
-                                    </textPath>
-                                </text>
-        
-                            </svg>
+                            <img src="img/menu-rotating-text.svg" alt="" class="menu__rotating-text-image">
                         </div>
                     </div>
                 </div>
@@ -707,13 +698,27 @@
                     </div>
                     <div class="booking__bottom-row">
                         <a href="#" class="booking__back-btn">
-                            Назад
+
+
+                            <span class="booking__back-btn-text">
+                                <svg width="14" height="14" aria-hidden="true" class="arrow-right">
+                                    <use xlink:href="#medium-arrow-right"></use>
+                                </svg>
+                                Назад
+
+                            </span>
                         </a>
                         <div class="booking__total">
                             Итого : 10 000 Руб
                         </div>
                         <button class="booking__submit-btn" type="submit">
-                            Далее
+                            <span class="booking__submit-btn-text">
+                                Далее
+                                <svg width="14" height="14" aria-hidden="true" class="arrow-right">
+                                    <use xlink:href="#medium-arrow-right"></use>
+                                </svg>
+                            </span>
+
                         </button>
                     </div>
                 </form>
