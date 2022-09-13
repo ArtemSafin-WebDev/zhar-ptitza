@@ -1,0 +1,45 @@
+.auth-panel {
+    padding: 13rem 0;
+    background: #ede8dd;
+
+    &__body {
+        max-width: 930px;
+        padding: 10rem 20px;
+        margin: 0 auto;
+        background: #ffffff;
+    }
+
+    &__title {
+        margin-bottom: 3rem;
+        font-family: var(--zhar-ptitza);
+        font-size: 4rem;
+        text-align: center;
+        color: #3a241f;
+    }
+
+    &__form {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+
+    &__field {
+
+    }
+
+    &__btn {
+
+    }
+
+    &__tip {
+        margin: 0 auto;
+        margin-top: 3rem;
+        max-width: 400px;
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+        color: #968A71;
+    }
+
+
+
+}
