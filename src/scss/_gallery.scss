@@ -17,6 +17,17 @@
         }
     }
 
+
+    .about-intro + & {
+        background: transparent;
+        padding-top: 0;
+        padding-bottom: 12rem;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 4.5rem;
+        }
+    }
+   
     .spa + & {
         background: white;
         color: var(--text-color);

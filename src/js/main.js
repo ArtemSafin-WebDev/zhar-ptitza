@@ -36,6 +36,8 @@ import datepicker from './datepicker';
 import timeDropdown from './timeDropdown';
 import ticketsAmount from './ticketsAmount';
 import bookingRoomModalSlider from './bookingRoomModalSlider';
+import aboutSpaceSlider from './aboutSpaceSlider';
+import aboutFoodSlider from './aboutFoodSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,6 +88,8 @@ document.addEventListener('DOMContentLoaded', function() {
     timeDropdown();
     ticketsAmount();
     bookingRoomModalSlider();
+    aboutSpaceSlider();
+    aboutFoodSlider();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));

@@ -5,6 +5,10 @@
     background-color: #fff;
     z-index: 1;
 
+    .about-space + & {
+        background-color: transparent;
+    }
+
     .intro + & {
         padding-top: 10rem;
 
@@ -52,6 +56,10 @@
 
         &--mobile-fullwidth {
             padding: 0;
+        }
+
+        &--mobile-last {
+            order: 12;
         }
     }
 }
@@ -106,10 +114,18 @@
         height: 3rem;
         display: block;
         fill: #000000;
+        transition: fill .2s;
 
         @include breakpoint(mobile) {
             width: 2.8rem;
             height: 2.1rem;
+        }
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        svg {
+            fill: #968a71;
         }
     }
 }
