@@ -3,8 +3,8 @@
     background: #ede8dd;
 
     &__body {
-        max-width: 930px;
-        padding: 10rem 20px;
+        max-width: 93rem;
+        padding: 10rem 5rem;
         margin: 0 auto;
         background: #ffffff;
     }
@@ -18,7 +18,7 @@
     }
 
     &__form {
-        max-width: 330px;
+        max-width: 33rem;
         margin: 0 auto;
     }
 
@@ -33,7 +33,7 @@
     &__tip {
         margin: 0 auto;
         margin-top: 3rem;
-        max-width: 400px;
+        max-width: 40rem;
         font-size: 1rem;
         line-height: 1.4;
         text-align: center;
@@ -42,4 +42,26 @@
 
 
 
+}
+
+@media only screen and (max-width: 640px) {
+
+    .auth-panel {
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+        background: none;
+
+        &__title {
+            font-size: 3.2rem;
+        }
+
+        &__body {
+            padding: 0;
+        }
+
+        &__btn {
+            margin-top: 3rem;
+        }
+    }
+    
 }
