@@ -36,20 +36,19 @@ import datepicker from './datepicker';
 import timeDropdown from './timeDropdown';
 import ticketsAmount from './ticketsAmount';
 import bookingRoomModalSlider from './bookingRoomModalSlider';
+import initTooltips from './initTooltips';
 
 gsap.registerPlugin(ScrollTrigger);
-
-
 
 window.triggerRefresh = () => {
     ScrollTrigger.refresh();
 };
 
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-    get: function(){
+    get: function() {
         return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
     }
-})
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
@@ -86,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     timeDropdown();
     ticketsAmount();
     bookingRoomModalSlider();
+    initTooltips();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));

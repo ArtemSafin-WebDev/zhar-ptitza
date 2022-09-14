@@ -8,6 +8,10 @@ export default function masks() {
         instance.mask(input);
     });
 
+    // enter last phone 4 symbols
+    const codeInputs = document.querySelectorAll('.js-code-input');
+    Inputmask('99 99').mask(codeInputs);
+
     const onlyNumericInputs = Array.from(document.querySelectorAll('.js-numeric-input-decimals'));
 
     onlyNumericInputs.forEach(input => {
