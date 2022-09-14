@@ -16,7 +16,11 @@
         padding-right: 2rem;
         font-size: 1.6rem;
         font-weight: 450;
-        line-height: 1.6;
+        line-height: 1.4;
+
+        p {
+            margin: .8rem 0;
+        }
     }
 
     &__code {
@@ -25,8 +29,12 @@
 
     &__footer {
         margin-top: 2rem;
+        color: #968A71;
+    }
+
+    &__btn-more {
         font-size: 1.6rem;
         font-weight: 450;
-        color: #968A71;
+        line-height: 1.4;
     }
 }

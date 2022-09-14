@@ -9,10 +9,12 @@
     &__title {
         font-family: var(--zhar-ptitza);
         font-size: 4rem;
+        line-height: 1.4;
     }
 
     &__name {
         font-size: 2rem;
+        line-height: 1.4;
         color: #3A241F;
     }
 
@@ -27,6 +29,7 @@
         padding: 2rem 3.6rem;
         font-size: 2rem;
         font-weight: 700;
+        line-height: 1.4;
         border-bottom: 1px solid rgba(206, 193, 163, 0.5);
 
         &.active,
