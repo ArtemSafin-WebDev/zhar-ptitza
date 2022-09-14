@@ -1,34 +1,88 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
-
-
-<section class="auth-panel">
+<div class="my-content">
     <div class="container">
-        <form action="#" class="auth-panel__body">
-            <h3 class="auth-panel__title">
-                Войти
-                <br> в личный кабинет
-            </h3>
 
-            <div class="auth-panel__form">
-                <div class="auth-panel__phone">
-                    <input type="tel" class="booking__checkout-form-input booking__checkout-form-input--phone js-phone-input" placeholder="+7 (ххх) ххх хх хх" required="" data-parsley-phone="" inputmode="text">
-                </div>
+        <div class="my-content__row">
+            <div class="my-content__left">
+                <aside class="my-menu">
+                    <div class="my-menu__header">
+                        <div class="my-menu__title">Мы вам рады,</div>
+                        <div class="my-menu__name">Некрасова Евгения</div>
+                    </div>
 
-                <div class="auth-panel__btn">
-                    <button class="booking__checkout-form-submit m-0" type="submit">
-                        Продолжить
-                    </button>
-                </div>
+                    <div class="my-menu__links">
+                        <a href="#" class="my-menu__link active">
+                            <svg width="19" height="19" aria-hidden="true" class="my-menu__icon-diamond">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                            <svg width="14" height="14" aria-hidden="true" class="my-menu__icon-right">
+                                <use xlink:href="#medium-arrow-right"></use>
+                            </svg>
+                            Главная
+                        </a>
+                        <a href="#" class="my-menu__link">
+                            <svg width="19" height="19" aria-hidden="true" class="my-menu__icon-diamond">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                            <svg width="14" height="14" aria-hidden="true" class="my-menu__icon-right">
+                                <use xlink:href="#medium-arrow-right"></use>
+                            </svg>
+                            Мои заказы
+                           
+                        </a>
+                        <a href="#" class="my-menu__link">
+                            <svg width="19" height="19" aria-hidden="true" class="my-menu__icon-diamond">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                            <svg width="14" height="14" aria-hidden="true" class="my-menu__icon-right">
+                                <use xlink:href="#medium-arrow-right"></use>
+                            </svg>
+                            Мои данные
+                            
+                        </a>
+                        <a href="#" class="my-menu__link">
+                            <svg width="19" height="19" aria-hidden="true" class="my-menu__icon-diamond">
+                                <use xlink:href="#diamond"></use>
+                            </svg>
+                            <svg width="14" height="14" aria-hidden="true" class="my-menu__icon-right">
+                                <use xlink:href="#medium-arrow-right"></use>
+                            </svg>
+                            Потратить баллы
+                        </a>
+                    </div>
+
+                    <a href="#" class="my-menu__quit-btn">
+                        Выйти
+                    </a>
+                    
+                </aside>
+
+                
             </div>
+            <div class="my-content__right"></div>
+        </div>
+        
 
-            <div class="auth-panel__tip">
-                Вводите Ваш номер, даже если вы не регистрировались. После подтверждения номера регистрация произойдет автоматически. 
-            </div>
-        </form>
+        
+
+        
+
+        
+
+     
+
     </div>
-</section>
+</div>
+
+
+<a href="#" class="about__link">
+    Подробнее
+    <svg width="14" height="14" aria-hidden="true" class="my-menu__icon-right">
+        <use xlink:href="#medium-arrow-right"></use>
+    </svg>
+</a>
 
 
 {{/content}}

@@ -1,0 +1,17 @@
+.my-content {
+    padding: 13rem 0;
+
+    &__row {
+        display: flex;
+    }
+
+    &__left {
+        flex: 0 0 auto;
+        width: 38rem;
+    }
+
+    &__right {
+        flex: 0 0 auto;
+        width: calc(100% - 38rem);
+    }
+}
