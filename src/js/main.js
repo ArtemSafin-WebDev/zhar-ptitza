@@ -37,6 +37,7 @@ import timeDropdown from './timeDropdown';
 import ticketsAmount from './ticketsAmount';
 import bookingRoomModalSlider from './bookingRoomModalSlider';
 import initTooltips from './initTooltips';
+import initMyPromo from './initMyPromo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ticketsAmount();
     bookingRoomModalSlider();
     initTooltips();
+    initMyPromo();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));
