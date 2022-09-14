@@ -1,0 +1,46 @@
+.my-person {
+    margin: 5rem 0;
+
+    &__title {
+        font-size: 4rem;
+        font-family: var(--zhar-ptitza);
+        margin-bottom: 1.2rem;
+    }
+
+    &__data {
+        border: 1px solid rgba(206, 193, 163, 0.5);
+        border-right: 0;
+        border-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: .5rem;
+        padding-bottom: 2rem;
+        font-weight: 450;
+    }
+
+    &__item {
+        margin-top: 1.5rem;
+        flex: 0 0 auto;
+        width: 33.33%;
+    }
+
+    &__label {
+        color: #968A71;
+    }
+
+    &__value {
+        margin-top: .4rem;
+    }
+
+    &__footer {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        color: #968A71;
+    }
+
+    &__btn-edit {
+
+    }
+
+
+}
