@@ -20,6 +20,12 @@
 
 
     &__arrow {
+
+        &.swiper-button-disabled,
+        &:hover {
+            color: #968A71;
+        }
+
         svg {
             width: 3.3rem;
             height: auto;
