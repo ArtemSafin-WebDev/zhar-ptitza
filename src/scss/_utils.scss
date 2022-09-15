@@ -46,3 +46,17 @@
 .mb-0 {
     margin-bottom: 0 !important;
 }
+
+
+
+@media only screen and (max-width: 640px) {
+    .d-mobile-none {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 639.98px) {
+    .d-tablet-none {
+        display: none !important;
+    }
+}

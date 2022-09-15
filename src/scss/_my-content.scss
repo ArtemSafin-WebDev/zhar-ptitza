@@ -17,10 +17,12 @@
     }
 }
 
+
+
 @media only screen and (max-width: 640px) {
     .my-content {
 
-        padding-top: 7rem;
+        padding-top: 5rem;
         padding-bottom: 3rem;
         
         > .container {
@@ -33,6 +35,11 @@
 
         &__left {
             width: auto;
+        }
+
+        &__right {
+            width: auto;
+            padding: 0 var(--content-padding);
         }
     }
 }

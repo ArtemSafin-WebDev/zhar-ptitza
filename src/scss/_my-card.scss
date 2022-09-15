@@ -1,6 +1,8 @@
 .my-card {
     display: flex;
 
+
+
     &__plastic {
         min-width: 42rem;
         padding: 2.5rem;
@@ -74,7 +76,60 @@
     }
 
     &__btn-help {
+        font-size: 1.4rem;
         font-weight: 500;
         line-height: 1.4;
+    }
+}
+
+
+
+@media only screen and (max-width: 640px) {
+
+    .my-card {
+        justify-content: center;
+        margin: 3.5rem 0;
+
+        &__plastic {
+            min-width: auto;
+            padding: 1.2rem;
+            border-radius: 1.7rem;
+        }
+
+        &__title {
+            margin-bottom: 1rem;
+            font-size: 2.6rem;
+        }
+
+        &__prop {
+            padding-right: 1rem;
+
+            &__label {
+                font-size: 1.2rem;
+            }
+
+            &__value {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__wallet {
+            padding-right: 1rem;
+
+            &__text {
+                font-size: 1rem;
+            }
+        }
+
+        &__btn-help {
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .my-card {
+        display: block;
     }
 }
