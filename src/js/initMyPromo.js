@@ -9,7 +9,7 @@ export default function initMyPromo() {
         const container = element.querySelector('.swiper');
 
         new Swiper(container, {
-            slidesPerView: 'auto',
+            slidesPerView: '2',
             spaceBetween: 0,
             speed: 600,
             navigation: {
