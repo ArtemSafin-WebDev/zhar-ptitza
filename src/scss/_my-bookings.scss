@@ -38,3 +38,21 @@
         line-height: 1.4;
     }
 }
+
+@media only screen and (max-width: 640px) {
+
+    .my-bookings {
+
+        &__title {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        &__item {
+            font-size: 1.4rem;
+        }
+
+      
+    }
+
+}
