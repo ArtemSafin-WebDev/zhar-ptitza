@@ -1,3 +1,6 @@
+@import '../../node_modules/tippy.js/dist/tippy';
+@import 'tippy-custom';
+
 @import 'vendor';
 @import 'mixins';
 @import 'fontface';
@@ -37,6 +40,18 @@
 @import 'about-food';
 @import 'about-new-age';
 @import 'programs';
+@import 'auth-panel';
+@import 'my-content';
+@import 'my-menu';
+@import 'my-orders';
+@import 'my-promo';
+@import 'my-person';
+@import 'my-bookings';
+@import 'my-card';
+@import 'my-checkout';
+
+
+
 
 
 

@@ -26,3 +26,37 @@
         display: none !important;
     }
 }
+
+.nice-link {
+    background-image: linear-gradient(currentColor,currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    transition: background-size .25s ease-out,color .2s;
+
+    &:hover {
+        background-size: 0 1px;
+    }
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+    .d-mobile-none {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 639.98px) {
+    .d-tablet-none {
+        display: none !important;
+    }
+}

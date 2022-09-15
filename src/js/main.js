@@ -38,20 +38,20 @@ import ticketsAmount from './ticketsAmount';
 import bookingRoomModalSlider from './bookingRoomModalSlider';
 import aboutSpaceSlider from './aboutSpaceSlider';
 import aboutFoodSlider from './aboutFoodSlider';
+import initTooltips from './initTooltips';
+import initMyPromo from './initMyPromo';
 
 gsap.registerPlugin(ScrollTrigger);
-
-
 
 window.triggerRefresh = () => {
     ScrollTrigger.refresh();
 };
 
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-    get: function(){
+    get: function() {
         return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
     }
-})
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
     bookingRoomModalSlider();
     aboutSpaceSlider();
     aboutFoodSlider();
+    initTooltips();
+    initMyPromo();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));
