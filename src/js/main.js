@@ -40,6 +40,9 @@ import aboutSpaceSlider from './aboutSpaceSlider';
 import aboutFoodSlider from './aboutFoodSlider';
 import initTooltips from './initTooltips';
 import initMyPromo from './initMyPromo';
+import bookingRoomSlider from './bookingRoomSlider';
+import roomsAmount from './roomsAmount';
+import selectBookingRoom from './selectBookingRoom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,6 +95,9 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutFoodSlider();
     initTooltips();
     initMyPromo();
+    bookingRoomSlider();
+    roomsAmount();
+    selectBookingRoom();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));

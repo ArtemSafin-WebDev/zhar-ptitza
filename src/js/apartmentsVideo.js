@@ -1,5 +1,5 @@
 export default function apartmentsVideo() {
-    const elements = Array.from(document.querySelectorAll('.apartments__slider-card-image-container, .rooms-catalog__card-image-container'));
+    const elements = Array.from(document.querySelectorAll('.apartments__slider-card-image-container, .rooms-catalog__card-image-container, .booking__room-slider-card-image-container'));
 
     elements.forEach(element => {
         const video = element.querySelector('video');

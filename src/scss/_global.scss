@@ -222,7 +222,8 @@ select:-webkit-autofill:focus {
 }
 
 .apartments__slider-card-image-container,
-.rooms-catalog__card-image-container {
+.rooms-catalog__card-image-container,
+.booking__room-slider-card-image-container {
     @include breakpoint(mobile) {
         &::after {
             content: '';
