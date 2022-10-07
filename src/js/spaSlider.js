@@ -19,7 +19,7 @@ export default function spaSlider() {
             },
             breakpoints: {
                 641: {
-                    slidesPerView: 4,
+                    slidesPerView: container.classList.contains('.js-spa-slider-3') ? 3 : 4,
                     spaceBetween: convertRemToPixels(8)
                 }
             }

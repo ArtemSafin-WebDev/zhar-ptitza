@@ -7,16 +7,15 @@ export default function maps() {
             console.log('MAP');
             const mapElement = element.querySelector('.js-map-element');
 
-            console.log(mapElement)
+            console.log(mapElement);
 
             const center = element.getAttribute('data-center').split(',');
             const coords = element.getAttribute('data-coords').split(',');
             const zoom = element.getAttribute('data-zoom');
-            
 
             const pin = {
                 iconLayout: 'default#image',
-                iconImageHref: 'img/pin.svg',
+                iconImageHref: element.hasAttribute('data-pin') ? element.getAttribute('data-pin') : 'img/pin.svg',
                 iconImageSize: [34, 40],
                 iconImageOffset: [-17, -40]
             };

@@ -1,4 +1,4 @@
-import { IS_MOBILE } from "./utils";
+import { IS_MOBILE } from './utils';
 
 export default function footerNav() {
     if (!IS_MOBILE) return;
@@ -10,13 +10,12 @@ export default function footerNav() {
 
         item.classList.add('js-accordion');
         btn.classList.add('js-accordion-btn');
-        list.classList.add('js-accordion-content');
+        list?.classList.add('js-accordion-content');
 
         console.log(btn, list);
     });
 
-
-    const footerContactsWrapper = document.querySelector('.page-footer__contacts-wrapper')
+    const footerContactsWrapper = document.querySelector('.page-footer__contacts-wrapper');
     const footerContactsTitle = document.querySelector('.page-footer__contacts-title');
     const footerContactsContent = document.querySelector('.page-footer__contacts-content');
 
@@ -25,5 +24,4 @@ export default function footerNav() {
         footerContactsTitle.classList.add('js-accordion-btn');
         footerContactsContent.classList.add('js-accordion-content');
     }
-
 }
