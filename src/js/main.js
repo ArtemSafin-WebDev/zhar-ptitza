@@ -43,6 +43,7 @@ import initMyPromo from './initMyPromo';
 import bookingRoomSlider from './bookingRoomSlider';
 import roomsAmount from './roomsAmount';
 import selectBookingRoom from './selectBookingRoom';
+import promosSlider from './promosSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     bookingRoomSlider();
     roomsAmount();
     selectBookingRoom();
+    promosSlider();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));
