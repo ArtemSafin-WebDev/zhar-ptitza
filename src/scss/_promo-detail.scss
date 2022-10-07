@@ -19,6 +19,10 @@
     margin: 0 auto;
     margin-bottom: 2rem;
 
+    .promo-detail--no-slider & {
+        max-width: 92rem;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 170%;
@@ -88,6 +92,10 @@
 .promo-detail__content {
     max-width: 68rem;
     margin: 0 auto;
+    width: 100%;
+    .promo-detail--no-slider & {
+        max-width: 92rem;
+    }
 }
 
 .promo-detail__title {
@@ -196,4 +204,17 @@
         transform: translateY(-50%);
         margin-top: 0.2rem;
     }
+}
+
+.promo-detail__image-wrapper {
+    width: 100%;
+    max-width: 92rem;
+    margin: 0 auto;
+    margin-bottom: 2.2rem;
+}
+
+.promo-detail__image {
+    display: block;
+    width: 100%;
+    height: auto;
 }
