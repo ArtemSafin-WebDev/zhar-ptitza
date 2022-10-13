@@ -13,6 +13,8 @@ export default function intro() {
         const mainContainer = element.querySelector('.intro__content-slider .swiper');
         const bgContainer = element.querySelector('.intro__bg-slider .swiper');
 
+        const bgSlides = Array.from(element.querySelectorAll('.intro__bg-slider .swiper-slide'));
+
         const mainInstance = new Swiper(mainContainer, {
             effect: 'fade',
             fadeEffect: {
@@ -25,12 +27,38 @@ export default function intro() {
             }
         });
 
+        const playVideo = index => {
+            bgSlides.forEach(slide => {
+                const video = slide?.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.classList.remove('playing');
+                }
+            });
+            const video = bgSlides[index]?.querySelector('video');
+            if (!video) return;
+
+            video.classList.add('playing');
+            video.play();
+        };
+
         const bgSlider = new Swiper(bgContainer, {
             effect: 'fade',
             fadeEffect: {
                 crossFade: false
+            },
+            init: false,
+            on: {
+                init: swiper => {
+                    playVideo(swiper.activeIndex);
+                },
+                slideChange: swiper => {
+                    playVideo(swiper.activeIndex);
+                }
             }
         });
+
+        bgSlider.init();
 
         mainInstance.controller.control = bgSlider;
         bgSlider.controller.control = mainInstance;
@@ -44,13 +72,12 @@ export default function intro() {
                 pin: '.intro__parallax-wrapper',
                 markers: false,
                 pinSpacing: false
-                
             }
         });
 
         tl.to(element.querySelector('.intro__bg-slider'), {
             scale: 1.05,
             duration: 0.4
-        })
+        });
     });
 }
