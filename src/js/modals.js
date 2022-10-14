@@ -22,7 +22,7 @@ export default function modals() {
 
         const openHandler = () => {
             lockScroll(modal, {
-                reserveScrollBarGap: true,
+                reserveScrollBarGap: true
             });
             modal.classList.add('active');
             document.body.classList.add('modal-open');
@@ -58,8 +58,8 @@ export default function modals() {
 
     window.closeModal = closeModal;
 
-    document.addEventListener('click', (event) => {
-        if (event.target.matches('a') || event.target.closest('a')) {
+    document.addEventListener('click', event => {
+        if (event.target.matches('a:not(.js-close-modal)') || event.target.closest('a:not(.js-close-modal)')) {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');
             const hash = link.hash;
             if (!hash) return;
@@ -75,7 +75,7 @@ export default function modals() {
         }
     });
 
-    document.addEventListener('keydown', function (event) {
+    document.addEventListener('keydown', function(event) {
         if (event.which === 27 && window.activeModal) {
             closeModal(window.activeModal);
         }

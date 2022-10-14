@@ -15,11 +15,23 @@ export default function roomsAmount() {
 
         let initialValue = input.value.trim() !== '' ? parseInt(input.value, 10) : min;
 
+        const checkbox = input.closest('.booking__room-slider-card-btns')?.querySelector('.booking__room-slider-card-checkbox-input');
+        const card = input.closest('.booking__room-slider-card');
+
         const setActivity = value => {
             if (value <= min) {
                 minus.disabled = true;
             } else {
                 minus.disabled = false;
+            }
+
+            if (input.hasAttribute('max')) {
+                const maxValue = input.getAttribute('max');
+                if (value >= maxValue) {
+                    plus.disabled = true;
+                } else {
+                    plus.disabled = false;
+                }
             }
         };
 
@@ -36,13 +48,26 @@ export default function roomsAmount() {
 
             value--;
 
+            if (value <= min) {
+                input.value = min;
+                if (checkbox) checkbox.checked = false;
+                if (card) card.classList.remove('selected');
+                if (value === 0) {
+                    value = 1;
+                }
+
+                console.log('Removing checked', checkbox);
+            }
+
             if (units) {
                 input.value = value + ' ' + num_word(value, units);
             } else {
                 input.value = value;
             }
 
-            setActivity(value);
+            setTimeout(() => {
+                setActivity(value);
+            }, 500);
         });
 
         plus.addEventListener('click', event => {
@@ -52,13 +77,22 @@ export default function roomsAmount() {
 
             value++;
 
+            if (input.hasAttribute('max')) {
+                const maxValue = input.getAttribute('max');
+                if (value >= maxValue) {
+                    input.value = maxValue;
+                }
+            }
+
             if (units) {
                 input.value = value + ' ' + num_word(value, units);
             } else {
                 input.value = value;
             }
 
-            setActivity(value);
+            setTimeout(() => {
+                setActivity(value);
+            });
         });
     });
 }

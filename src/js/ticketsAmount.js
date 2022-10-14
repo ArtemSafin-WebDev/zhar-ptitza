@@ -15,6 +15,15 @@ export default function ticketsAmount() {
             } else {
                 minus.disabled = false;
             }
+
+            if (input.hasAttribute('max')) {
+                const maxValue = input.getAttribute('max');
+                if (value >= maxValue) {
+                    plus.disabled = true;
+                } else {
+                    plus.disabled = false;
+                }
+            }
         };
 
         setActivity(initialValue);
@@ -28,7 +37,13 @@ export default function ticketsAmount() {
 
             input.value = value;
 
-            setActivity(value);
+            if (value <= 0) {
+                input.value = 0;
+            }
+
+            setTimeout(() => {
+                setActivity(value);
+            }, 500);
         });
 
         plus.addEventListener('click', event => {
@@ -39,7 +54,16 @@ export default function ticketsAmount() {
             value++;
             input.value = value;
 
-            setActivity(value);
+            if (input.hasAttribute('max')) {
+                const maxValue = input.getAttribute('max');
+                if (value >= maxValue) {
+                    input.value = maxValue;
+                }
+            }
+
+            setTimeout(() => {
+                setActivity(value);
+            }, 500);
         });
     });
 }

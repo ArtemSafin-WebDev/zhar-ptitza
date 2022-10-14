@@ -12,6 +12,7 @@ export default function bookingRoomSlider() {
             spaceBetween: 0,
             speed: 600,
             watchOverflow: true,
+            threshold: 15,
             navigation: {
                 nextEl: element.querySelector('.booking__room-slider-arrow--next'),
                 prevEl: element.querySelector('.booking__room-slider-arrow--prev')
@@ -19,7 +20,7 @@ export default function bookingRoomSlider() {
             breakpoints: {
                 641: {
                     slidesPerView: 2,
-                    spaceBetween: convertRemToPixels(2),
+                    spaceBetween: convertRemToPixels(2)
                 }
             }
         });
