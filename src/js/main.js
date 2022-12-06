@@ -45,6 +45,8 @@ import roomsAmount from './roomsAmount';
 import selectBookingRoom from './selectBookingRoom';
 import promosSlider from './promosSlider';
 import promoDetailSlider from './promoDetailSlider';
+import newsletterSlider from './newsletterSlider';
+import newsletter from './newsLetter';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
     selectBookingRoom();
     promosSlider();
     promoDetailSlider();
+    newsletterSlider();
+    newsletter();
 });
 
 let imgLoad = imagesLoaded(document.querySelector('.page-content'));
