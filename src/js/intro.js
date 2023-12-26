@@ -20,6 +20,7 @@ export default function intro() {
             fadeEffect: {
                 crossFade: true
             },
+            grabCursor: true,
             pagination: {
                 el: element.querySelector('.intro__pagination'),
                 type: 'bullets',

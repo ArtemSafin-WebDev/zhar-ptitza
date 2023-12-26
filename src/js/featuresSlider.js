@@ -17,8 +17,8 @@ export default function featuresSlider() {
 
             speed: 800,
             autoHeight: true,
+            grabCursor: true,
 
-           
             navigation: {
                 nextEl: element.querySelector('.features__slider-arrow--next'),
                 prevEl: element.querySelector('.features__slider-arrow--prev')

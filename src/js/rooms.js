@@ -12,20 +12,17 @@ export default function rooms() {
 
     if (roomsCards.length !== 2) return;
 
-    console.log('Padding bottom', parseFloat(window.getComputedStyle(rooms).getPropertyValue('padding-bottom')));
-
     ScrollTrigger.matchMedia({
         '(min-width: 641px)': function() {
             roomsCards.forEach((card, cardIndex) => {
-                
                 const contentWrapper = card.querySelector('.rooms__card-content-wrapper');
                 const cardContent = card.querySelector('.rooms__card-content');
                 const title = card.querySelector('.rooms__card-title');
                 const zoneTitle = document.querySelector('.zone__heading');
-                const zoneHeadingText = document.querySelector('.zone__heading-text')
+                const zoneHeadingText = document.querySelector('.zone__heading-text');
                 const zoneZoomWrapper = document.querySelector('.zone__image-zoom-wrapper');
                 const zoneZoomWrapperInner = document.querySelector('.zone__image-zoom-wrapper-inner');
-                
+
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: card,
@@ -43,34 +40,46 @@ export default function rooms() {
                             tl.to(title, {
                                 autoAlpha: 0,
                                 duration: 0
-                            }).to(
-                                zoneTitle,
-                                {
-                                    autoAlpha: 1,
-                                    duration: 0
-                                },
-                                '<'
-                            ).to(zoneHeadingText, {
-                                autoAlpha: 1,
-                                duration: 0.3
-                            }, '<')
+                            })
+                                .to(
+                                    zoneTitle,
+                                    {
+                                        autoAlpha: 1,
+                                        duration: 0
+                                    },
+                                    '<'
+                                )
+                                .to(
+                                    zoneHeadingText,
+                                    {
+                                        autoAlpha: 1,
+                                        duration: 0.3
+                                    },
+                                    '<'
+                                );
                         },
                         onEnterBack: () => {
                             const tl = gsap.timeline();
                             tl.to(title, {
                                 autoAlpha: 1,
                                 duration: 0
-                            }).to(
-                                zoneTitle,
-                                {
-                                    autoAlpha: 0,
-                                    duration: 0
-                                },
-                                '<'
-                            ).to(zoneHeadingText, {
-                                autoAlpha: 0,
-                                duration: 0.3
-                            }, '<')
+                            })
+                                .to(
+                                    zoneTitle,
+                                    {
+                                        autoAlpha: 0,
+                                        duration: 0
+                                    },
+                                    '<'
+                                )
+                                .to(
+                                    zoneHeadingText,
+                                    {
+                                        autoAlpha: 0,
+                                        duration: 0.3
+                                    },
+                                    '<'
+                                );
                         }
                     }
                 });

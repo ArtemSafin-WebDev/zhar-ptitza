@@ -3,8 +3,6 @@ import { IS_MOBILE } from './utils';
 
 Swiper.use([Navigation, EffectFade, Autoplay]);
 
-
-
 export default function roomSlider() {
     const elements = Array.from(document.querySelectorAll('.js-room-slider'));
 
@@ -19,15 +17,15 @@ export default function roomSlider() {
             loopAdditionalSlides: 10,
             loop: true,
             speed: 500,
+            grabCursor: true,
             navigation: {
                 nextEl: element.querySelector('.room__slider-arrow--next'),
                 prevEl: element.querySelector('.room__slider-arrow--prev')
             },
             breakpoints: {
                 641: {
-                    centeredSlides: true,
+                    centeredSlides: true
                 }
-              
             }
         });
     });

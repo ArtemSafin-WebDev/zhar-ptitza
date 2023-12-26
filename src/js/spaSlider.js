@@ -17,6 +17,7 @@ export default function spaSlider() {
                 nextEl: element.querySelector('.spa-slider__arrow--next'),
                 prevEl: element.querySelector('.spa-slider__arrow--prev')
             },
+            grabCursor: true,
             breakpoints: {
                 641: {
                     slidesPerView: container.classList.contains('.js-spa-slider-3') ? 3 : 4,

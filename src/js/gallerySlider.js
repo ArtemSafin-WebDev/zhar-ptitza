@@ -19,6 +19,7 @@ export default function gallerySlider() {
             loopedSlides: 15,
             watchOverflow: true,
             speed: 700,
+            grabCursor: true
             // speed: 3500,
             // allowTouchMove: false,
             // autoplay: {
@@ -36,16 +37,15 @@ export default function gallerySlider() {
             }
         });
 
-        tl.fromTo(element, {
-            x: () => window.matchMedia("(max-width: 640px)").matches ? -1 * convertRemToPixels(4) : -1 * convertRemToPixels(18)
-        }, {
-            x: () => window.matchMedia("(max-width: 640px)").matches ? 1 * convertRemToPixels(4) : 1 * convertRemToPixels(18),
-            duration: 0.5
-        })
-
-
-
-
-
+        tl.fromTo(
+            element,
+            {
+                x: () => (window.matchMedia('(max-width: 640px)').matches ? -1 * convertRemToPixels(4) : -1 * convertRemToPixels(18))
+            },
+            {
+                x: () => (window.matchMedia('(max-width: 640px)').matches ? 1 * convertRemToPixels(4) : 1 * convertRemToPixels(18)),
+                duration: 0.5
+            }
+        );
     });
 }

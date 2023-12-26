@@ -14,7 +14,8 @@ export default function bathsSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             spaceBetween: 0,
-            speed: 500
+            speed: 500,
+            grabCursor: true
         });
     });
 }

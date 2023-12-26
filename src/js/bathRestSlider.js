@@ -10,6 +10,7 @@ export default function bathRestSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             speed: 600,
+            grabCursor: true,
             pagination: {
                 el: element.querySelector('.bath-rest__slider-pagination'),
                 type: 'bullets',

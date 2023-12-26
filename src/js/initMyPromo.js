@@ -12,6 +12,7 @@ export default function initMyPromo() {
             slidesPerView: '2',
             spaceBetween: 0,
             speed: 600,
+            grabCursor: true,
             navigation: {
                 nextEl: element.querySelector('.my-promo__arrow--next'),
                 prevEl: element.querySelector('.my-promo__arrow--prev')

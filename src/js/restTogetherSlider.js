@@ -17,6 +17,7 @@ export default function restTogetherSlider() {
                 nextEl: element.querySelector('.rest-together__slider-arrow--next'),
                 prevEl: element.querySelector('.rest-together__slider-arrow--prev')
             },
+            grabCursor: true,
             breakpoints: {
                 641: {
                     slidesPerView: 1,

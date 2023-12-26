@@ -12,13 +12,11 @@
     color: #3a241f;
     z-index: 600;
 
-    
-
-    // .container {
-    //     display: flex;
-    //     flex-direction: column;
-    //     flex-grow: 1;
-    // }
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
 
     opacity: 0;
     visibility: hidden;
@@ -44,8 +42,6 @@
 }
 
 .menu__content {
-  
-
     @include breakpointMF(small-tablet) {
         display: flex;
         flex-direction: column;
@@ -59,6 +55,54 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
+    }
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    margin-bottom: 3.8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.5rem;
+    }
+}
+
+.menu__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    position: relative;
+    line-height: 120%;
+
+    text-transform: uppercase;
+    align-self: flex-start;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transition: transform 0.2s;
+        transform-origin: left center;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        &::before {
+            transform: scaleX(0);
+        }
     }
 }
 
@@ -77,6 +121,10 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
+    position: fixed;
+    left: 90%;
+    top: 35%;
+
     @include breakpoint(mobile) {
         display: none;
     }
@@ -88,7 +136,7 @@
 
     //     font-size: 8rem;
     //     text-transform: uppercase;
-        
+
     // }
 
     svg {
@@ -123,7 +171,6 @@
     border-bottom: 1px solid rgba(183, 169, 138, 0.5);
 
     @include breakpoint(mobile) {
-      
         display: contents;
         grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
         display: grid;
@@ -141,7 +188,6 @@
             grid-row: 1 / 2;
             pointer-events: none;
             align-self: flex-end;
-
         }
     }
 }
@@ -637,7 +683,7 @@
     position: relative;
     font-style: normal;
     font-weight: 400;
-    font-size: 6rem;
+    font-size: 4rem;
     line-height: 120%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -681,7 +727,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 2.8rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     padding-top: 1.5rem;
 
     @include breakpoint(mobile) {

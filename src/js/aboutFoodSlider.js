@@ -7,15 +7,14 @@ export default function aboutFoodSlider() {
     elements.forEach(element => {
         const container = element.querySelector('.swiper');
 
-        const instance = new Swiper(container, {
-           
-            
+        new Swiper(container, {
             slidesPerView: 'auto',
             speed: 600,
             centeredSlides: true,
             loop: true,
             loopedSlides: 6,
             watchOverflow: true,
+            grabCursor: true,
             navigation: {
                 nextEl: element.querySelector('.about-food__slider-next'),
                 prevEl: element.querySelector('.about-food__slider-prev')
@@ -23,7 +22,7 @@ export default function aboutFoodSlider() {
             breakpoints: {
                 641: {
                     slidesPerView: 3,
-                    spaceBetween: convertRemToPixels(5.2),
+                    spaceBetween: convertRemToPixels(5.2)
                 }
             }
         });

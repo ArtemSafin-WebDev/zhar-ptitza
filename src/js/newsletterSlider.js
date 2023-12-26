@@ -14,6 +14,7 @@ export default function newsletterSlider() {
             fadeEffect: {
                 crossFade: true
             },
+            grabCursor: true,
             pagination: {
                 el: element.querySelector('.newsletter__slider-pagination'),
                 type: 'bullets',

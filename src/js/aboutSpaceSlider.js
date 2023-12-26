@@ -6,9 +6,10 @@ export default function aboutSpaceSlider() {
     elements.forEach(element => {
         const container = element.querySelector('.swiper');
 
-        const instance = new Swiper(container, {
+        new Swiper(container, {
             slidesPerView: 'auto',
             speed: 600,
+            grabCursor: true,
             navigation: {
                 nextEl: element.querySelector('.about-space__arrows-btn--next'),
                 prevEl: element.querySelector('.about-space__arrows-btn--prev')

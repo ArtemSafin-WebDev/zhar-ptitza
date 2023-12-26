@@ -45,6 +45,10 @@
     }
 }
 
+.newsletter__slider-card {
+    padding: 1px;
+}
+
 .newsletter__slider-card-title {
     font-style: normal;
     font-weight: 700;
@@ -82,17 +86,20 @@
     font-size: 1.6rem;
     line-height: 2rem;
     padding: 1.4rem 2.8rem;
-    width: 100%;
+    width: auto;
+    margin: 0 1px;
     border: 1px solid #ede8dd;
     color: #ede8dd;
     transition: background-color 0.2s, color 0.2s;
+    align-self: stretch;
+    display: block;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 1.7rem;
-        width: 100%;
+
         padding: 1.3rem 2.6rem;
     }
     &:link,
@@ -236,7 +243,7 @@
     font-size: 2rem;
     line-height: 120%;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
+
     color: #cec1a3;
 
     @include breakpoint(mobile) {
@@ -258,6 +265,7 @@
 
 .newsletter__form-submit {
     flex-shrink: 0;
+    padding-right: 0.3rem;
 
     @include breakpoint(mobile) {
         align-self: center;

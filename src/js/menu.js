@@ -8,8 +8,6 @@ export default function menu() {
 
     window.menuOpen = false;
 
-    console.log(menu, burgers);
-
     if (!burgers.length || !menu) return;
 
     const openMenu = () => {
@@ -35,7 +33,7 @@ export default function menu() {
             event.preventDefault();
             if (!window.menuOpen) {
                 openMenu();
-            } 
+            }
         });
     });
 

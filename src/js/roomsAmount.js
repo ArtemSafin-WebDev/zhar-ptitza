@@ -55,8 +55,6 @@ export default function roomsAmount() {
                 if (value === 0) {
                     value = 1;
                 }
-
-                console.log('Removing checked', checkbox);
             }
 
             if (units) {

@@ -11,8 +11,6 @@ export default function footerNav() {
         item.classList.add('js-accordion');
         btn.classList.add('js-accordion-btn');
         list?.classList.add('js-accordion-content');
-
-        console.log(btn, list);
     });
 
     const footerContactsWrapper = document.querySelector('.page-footer__contacts-wrapper');

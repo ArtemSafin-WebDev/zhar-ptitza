@@ -15,6 +15,7 @@ export default function promosSlider() {
                 nextEl: element.querySelector('.promos-intro__slider-arrow--next'),
                 prevEl: element.querySelector('.promos-intro__slider-arrow--prev')
             },
+            grabCursor: true,
             pagination: {
                 el: element.querySelector('.promos-intro__slider-pagination'),
                 type: 'bullets',

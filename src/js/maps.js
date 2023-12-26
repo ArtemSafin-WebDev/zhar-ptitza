@@ -1,13 +1,10 @@
 export default function maps() {
     const elements = Array.from(document.querySelectorAll('.js-map'));
-    console.log('MAP ELEMNTS', elements);
+
     elements.forEach(element => {
         ymaps.ready(initMap);
         function initMap() {
-            console.log('MAP');
             const mapElement = element.querySelector('.js-map-element');
-
-            console.log(mapElement);
 
             const center = element.getAttribute('data-center').split(',');
             const coords = element.getAttribute('data-coords').split(',');

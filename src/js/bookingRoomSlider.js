@@ -13,6 +13,7 @@ export default function bookingRoomSlider() {
             speed: 600,
             watchOverflow: true,
             threshold: 15,
+            grabCursor: true,
             navigation: {
                 nextEl: element.querySelector('.booking__room-slider-arrow--next'),
                 prevEl: element.querySelector('.booking__room-slider-arrow--prev')

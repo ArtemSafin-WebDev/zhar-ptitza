@@ -14,6 +14,7 @@ export default function apartments() {
             slidesPerGroup: 1,
             spaceBetween: 0,
             speed: 1000,
+            grabCursor: true,
             pagination: {
                 el: element.querySelector('.apartments__slider-pagination'),
                 type: 'fraction'

@@ -13,6 +13,7 @@ export default function news() {
             slidesPerView: 'auto',
             spaceBetween: 0,
             speed: 600,
+            grabCursor: true,
             navigation: {
                 nextEl: element.querySelector('.news__arrows-btn--next'),
                 prevEl: element.querySelector('.news__arrows-btn--prev')

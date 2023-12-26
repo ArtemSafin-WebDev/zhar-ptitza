@@ -18,7 +18,7 @@ export default function promoDetailSlider() {
             loopAdditionalSlides: 10,
             loop: true,
             speed: 500,
-
+            grabCursor: true,
             breakpoints: {
                 641: {
                     centeredSlides: true
