@@ -119,6 +119,17 @@
     }
 }
 
+.page-header__logo-image {
+    display: block;
+    width: 18rem;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+        height: auto;
+    }
+}
+
 .page-header__nav-wrapper {
     display: flex;
     align-items: center;

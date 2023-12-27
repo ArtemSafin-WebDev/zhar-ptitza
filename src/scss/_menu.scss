@@ -326,6 +326,17 @@
     }
 }
 
+.menu__logo-image {
+    display: block;
+    width: 18rem;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+        height: auto;
+    }
+}
+
 .menu__order-link {
     margin-left: auto;
     flex-shrink: 0;
@@ -337,20 +348,20 @@
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border: 0.15rem solid currentColor;
+    border: 0.15rem solid rgb(58, 36, 31);
     padding: 1.5rem 2rem;
     gap: 1rem;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     display: inline-flex;
     align-items: center;
-    color: black;
+    color: rgb(58, 36, 31);
 
     @include breakpoint(mobile) {
         display: none;
     }
     &:link,
     &:visited {
-        color: black;
+        color: rgb(58, 36, 31);
     }
     svg {
         flex-shrink: 0;
@@ -363,8 +374,8 @@
     .no-touch &:hover,
     .touch &:active {
         color: white;
-        background-color: black;
-        border-color: black;
+        background-color: rgb(58, 36, 31);
+        border-color: rgb(58, 36, 31);
         svg {
             transform: translateX(0.3rem);
         }
