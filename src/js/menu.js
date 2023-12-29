@@ -44,4 +44,17 @@ export default function menu() {
             closeMenu();
         }
     });
+
+    const items = Array.from(document.querySelectorAll('.menu__nav-list-item'));
+
+    items.forEach(item => {
+        const hasSubmenu = !!item.querySelector('.menu__submenu-list');
+        const link = item.querySelector('.menu__nav-link');
+        link.addEventListener('click', event => {
+            if (window.matchMedia('(max-width: 640px)').matches && hasSubmenu) {
+                event.preventDefault();
+                item.classList.toggle('shown');
+            }
+        });
+    });
 }

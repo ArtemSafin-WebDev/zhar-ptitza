@@ -92,7 +92,7 @@
     color: #ede8dd;
     transition: background-color 0.2s, color 0.2s;
     align-self: stretch;
-    display: block;
+    width: 100%;
 
     @include breakpoint(mobile) {
         font-style: normal;
@@ -136,7 +136,7 @@
         margin-left: 1rem;
         top: 50%;
         transform: translateY(-50%);
-        margin-top: 0.2rem;
+        margin-top: 0.1rem;
     }
 }
 

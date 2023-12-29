@@ -317,12 +317,29 @@
     line-height: 1;
     text-transform: uppercase;
     text-align: center;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
     @include breakpoint(mobile) {
         font-size: 1.5rem;
         grid-area: logo;
         white-space: nowrap;
         margin-top: 0.4rem;
+        gap: 0.5rem;
+    }
+}
+
+.menu__logo-text {
+    text-align: center;
+    color: currentColor;
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+
+    @include breakpoint(mobile) {
+        font-size: 0.7rem;
     }
 }
 
@@ -680,6 +697,14 @@
 
     @include breakpoint(mobile) {
         padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 0fr;
+        transition: grid-template-rows 500ms;
+
+        &.shown {
+            grid-template-rows: auto 1fr;
+        }
     }
     &.active {
         .menu__nav-link {
@@ -742,12 +767,25 @@
     padding-top: 1.5rem;
 
     @include breakpoint(mobile) {
-        display: none;
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 0;
+        padding-top: 0;
+
+        overflow: hidden;
+        flex-wrap: nowrap;
     }
 }
 
 .menu__submenu-list-item {
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        &:first-child {
+            padding-top: 1.5rem;
+        }
+    }
 }
 
 .menu__submenu-link {
@@ -776,6 +814,17 @@
     .touch &:active {
         svg {
             transform: translateX(0.3rem);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        gap: 0.5rem;
+
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
         }
     }
 }
