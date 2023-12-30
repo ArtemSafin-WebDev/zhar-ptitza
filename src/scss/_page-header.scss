@@ -59,6 +59,8 @@
         color: var(--text-color);
         .page-header__logo {
             opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.2s, visibility 0.2s;
         }
         @include breakpointMF(small-tablet) {
             .page-header__order-link {
@@ -86,6 +88,12 @@
                     fill: #1c1c1c;
                 }
             }
+
+            .page-header__book-link {
+                svg {
+                    fill: #1c1c1c;
+                }
+            }
         }
     }
 
@@ -107,13 +115,14 @@
     font-family: var(--zhar-ptitza);
     line-height: 1;
     text-transform: uppercase;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
     gap: 1rem;
     opacity: 0;
+    visibility: hidden;
 
     @include breakpoint(mobile) {
         font-size: 1.5rem;
@@ -301,7 +310,6 @@
 }
 
 .page-header__order-link {
-    margin-left: auto;
     flex-shrink: 0;
     white-space: nowrap;
     font-style: normal;
@@ -352,5 +360,67 @@
         svg {
             transform: translateX(0.3rem);
         }
+    }
+}
+
+.page-header__book-link {
+    @include breakpointMF(small-tablet) {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border: 0.15rem solid currentColor;
+        padding: 1.5rem 2rem;
+        gap: 1rem;
+        transition: background-color 0.2s;
+        display: inline-flex;
+        align-items: center;
+        color: white;
+
+        svg {
+            display: none;
+        }
+
+        &:hover {
+            background-color: white;
+            color: var(--text-color);
+            border-color: white;
+            svg {
+                transform: translateX(0.3rem);
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        flex-shrink: 0;
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+            fill: white;
+            transition: fill 0.2s;
+        }
+    }
+}
+
+.page-header__book-link-text {
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.page-header__links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
     }
 }
