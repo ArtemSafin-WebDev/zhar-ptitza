@@ -47,6 +47,8 @@
 
 .newsletter__slider-card {
     padding: 1px;
+    display: flex;
+    flex-direction: column;
 }
 
 .newsletter__slider-card-title {
@@ -87,12 +89,14 @@
     line-height: 2rem;
     padding: 1.4rem 2.8rem;
     width: auto;
-    margin: 0 1px;
+
     border: 1px solid #ede8dd;
     color: #ede8dd;
     transition: background-color 0.2s, color 0.2s;
     align-self: stretch;
-    width: 100%;
+    width: auto;
+    align-self: stretch;
+    margin: 0 1px;
 
     @include breakpoint(mobile) {
         font-style: normal;

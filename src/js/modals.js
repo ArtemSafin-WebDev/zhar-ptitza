@@ -1,5 +1,3 @@
-import { disableBodyScroll as lockScroll, clearAllBodyScrollLocks as unlockScroll } from 'body-scroll-lock';
-
 export default function modals() {
     window.activeModal = null;
 
@@ -19,9 +17,6 @@ export default function modals() {
         }
 
         const openHandler = () => {
-            lockScroll(modal, {
-                reserveScrollBarGap: true
-            });
             modal.classList.add('active');
             document.body.classList.add('modal-open');
             window.activeModal = modal;
@@ -42,7 +37,6 @@ export default function modals() {
 
     function closeModal(modal) {
         document.body.classList.remove('modal-open');
-        unlockScroll();
 
         modal.classList.remove('active');
 

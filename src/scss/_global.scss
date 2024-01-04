@@ -25,7 +25,7 @@ html {
     font-size: 10px;
     font-size: 9px;
     -webkit-text-size-adjust: 100%;
-
+    scrollbar-gutter: stable;
     @include noHighlight();
 
     @media screen and (max-width: 1439px) {
@@ -51,6 +51,14 @@ body {
     flex-direction: column;
     font-family: var(--avenir);
     color: var(--text-color);
+}
+
+body.mobile-menu-open,
+body.modal-open {
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 main {

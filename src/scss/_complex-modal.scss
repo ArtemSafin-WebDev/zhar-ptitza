@@ -5,7 +5,8 @@
     right: 0;
     height: 100%;
     -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     z-index: 400;

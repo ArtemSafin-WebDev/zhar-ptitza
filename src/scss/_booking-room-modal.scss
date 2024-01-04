@@ -5,7 +5,7 @@
     right: 0;
     height: 100%;
     -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
+
     display: flex;
     flex-direction: column;
     z-index: 200;
@@ -14,6 +14,9 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
     padding: var(--content-padding) 0;
+
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
 
     @include breakpoint(mobile) {
         background-color: #fff;
@@ -137,7 +140,7 @@
 
     @include breakpoint(mobile) {
         position: absolute;
-        right: .25rem;
+        right: 0.25rem;
         top: -3.5rem;
         width: 2.8rem;
         height: 2.8rem;
@@ -160,7 +163,6 @@
 }
 
 .booking-room-modal__slider {
-
     @include breakpoint(mobile) {
         margin: 0 calc(-1 * var(--content-padding));
     }
@@ -372,7 +374,7 @@
     @include breakpoint(mobile) {
         flex-direction: row;
         align-items: center;
-        gap: .6rem;
+        gap: 0.6rem;
     }
 
     svg {
@@ -411,9 +413,9 @@
 
     @include breakpoint(mobile) {
         font-style: normal;
-      
+
         font-size: 1.2rem;
-        color: #B7A98A;
+        color: #b7a98a;
         line-height: 170%;
     }
 }

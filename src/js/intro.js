@@ -48,6 +48,7 @@ export default function intro() {
             fadeEffect: {
                 crossFade: false
             },
+            grabCursor: true,
             init: false,
             on: {
                 init: swiper => {

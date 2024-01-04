@@ -1,5 +1,3 @@
-import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
-
 export default function menu() {
     const burgers = Array.from(document.querySelectorAll('.page-header__burger'));
     const menu = document.querySelector('.menu');
@@ -13,15 +11,13 @@ export default function menu() {
     const openMenu = () => {
         if (window.menuOpen) return;
         document.body.classList.add('mobile-menu-open');
-        disableBodyScroll(menu, {
-            reserveScrollBarGap: false
-        });
+
         window.menuOpen = true;
     };
     const closeMenu = () => {
         if (!window.menuOpen) return;
         document.body.classList.remove('mobile-menu-open');
-        clearAllBodyScrollLocks();
+
         window.menuOpen = false;
     };
 
