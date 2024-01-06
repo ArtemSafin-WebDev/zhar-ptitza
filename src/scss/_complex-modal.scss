@@ -15,7 +15,7 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
     padding: 4rem var(--content-padding);
-
+    cursor: pointer;
     &.active {
         opacity: 1;
         visibility: inherit;
@@ -36,6 +36,7 @@
     padding: 5rem 7rem;
     display: flex;
     flex-direction: column;
+    cursor: default;
 
     @include breakpoint(mobile) {
         padding: 1rem var(--content-padding);
