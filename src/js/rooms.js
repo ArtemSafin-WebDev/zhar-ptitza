@@ -22,6 +22,7 @@ export default function rooms() {
                 const zoneHeadingText = document.querySelector('.zone__heading-text');
                 const zoneZoomWrapper = document.querySelector('.zone__image-zoom-wrapper');
                 const zoneZoomWrapperInner = document.querySelector('.zone__image-zoom-wrapper-inner');
+                const zoneImage = document.querySelector('.zone__image');
 
                 const tl = gsap.timeline({
                     scrollTrigger: {
@@ -112,10 +113,24 @@ export default function rooms() {
                     }
                 });
 
-                zoneTl.to(zoneZoomWrapperInner, {
-                    scale: 1,
-                    duration: 1
-                });
+                zoneTl.fromTo(
+                    zoneZoomWrapperInner,
+                    {
+                        scale: 0.5
+                    },
+                    {
+                        scale: 1,
+                        duration: 1
+                    }
+                );
+
+                if (zoneImage.complete) {
+                    ScrollTrigger.refresh();
+                } else {
+                    zoneImage.addEventListener('load', () => {
+                        ScrollTrigger.refresh();
+                    });
+                }
             });
         }
     });

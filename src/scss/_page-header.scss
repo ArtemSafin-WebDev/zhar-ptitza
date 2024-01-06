@@ -3,9 +3,10 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: auto;
+    width: 100svw;
     z-index: 300;
     transition: box-shadow 0.2s;
+    scrollbar-gutter: stable;
 
     &::before {
         content: '';
@@ -25,14 +26,6 @@
         &::before {
             opacity: 1;
         }
-    }
-
-    .modal-open &,
-    .mobile-menu-open & {
-        padding-right: var(--sb-width, 0);
-        // &::before {
-        //     right: var(--sb-width, 0);
-        // }
     }
 }
 

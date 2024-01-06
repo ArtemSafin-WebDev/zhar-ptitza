@@ -5,11 +5,6 @@
     position: relative;
     z-index: 1;
 
-    .modal-open &,
-    .mobile-menu-open & {
-        padding-right: var(--sb-width, 0);
-    }
-
     @include breakpoint(mobile) {
         padding-top: 3rem;
     }

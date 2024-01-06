@@ -14,21 +14,11 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    overflow: clip;
 }
 
 .page-main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-
-   
-}
-
-
-section {
-   
-    .mobile-menu-open & {
-        padding-right: var(--sb-width, 0);
-        
-    }
 }

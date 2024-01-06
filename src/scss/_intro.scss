@@ -131,11 +131,14 @@
         position: fixed;
         z-index: 120;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) translateZ(0);
         right: 1.5rem;
 
-        .mobile-menu-open & {
-            right: calc(var(--sb-width, 0) + 1.5rem);
+        @supports (width: 100svw) {
+            left: 100svw;
+            right: auto;
+            margin-left: -3.5rem;
+            transform: translateY(-50%) translateX(-100%) translateZ(0);
         }
     }
 

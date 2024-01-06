@@ -15,6 +15,15 @@
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
 
+    @include breakpointMF(small-tablet) {
+        @supports (width: 100svw) {
+            left: 100svw;
+            right: auto;
+            margin-left: -10rem;
+            transform: translateX(-100%) translateZ(0);
+        }
+    }
+
     @include breakpoint(mobile) {
         width: auto;
         left: 0;

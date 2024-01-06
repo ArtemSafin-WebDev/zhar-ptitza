@@ -2,7 +2,8 @@
     position: fixed;
     left: 0;
     top: 0;
-    right: 0;
+    width: 100%;
+    width: 100svw;
     bottom: 0;
     overscroll-behavior-y: contain;
     overflow-y: auto;
@@ -23,15 +24,10 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
 
-    // .mobile-menu-open & {
-    //     right: var(--sb-width, 0);
-    // }
-
     .mobile-menu-open & {
         opacity: 1;
         visibility: inherit;
         transition: opacity 0.4s, visibility 0.4s;
-        padding-right: var(--sb-width, 0);
     }
 }
 
@@ -526,6 +522,7 @@
     @include breakpointMF(small-tablet) {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+        display: grid;
     }
 }
 
@@ -535,6 +532,11 @@
     visibility: hidden;
 
     transition: opacity 0.4s ease 0.4s, visibility 0s linear 0.8s;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
 
     &.active {
         opacity: 1;
@@ -549,6 +551,44 @@
 }
 
 .menu__images-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu__images-card-inner-images {
+    display: contents;
+}
+
+.menu__images-card-inner-image-wrapper {
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 70%;
+    }
+}
+
+.menu__images-card-inner-image {
     position: absolute;
     left: 0;
     top: 0;
@@ -767,6 +807,10 @@
     padding-bottom: 2rem;
     padding-top: 1.5rem;
 
+    @include breakpointMF(small-tablet) {
+        column-gap: 0;
+    }
+
     @include breakpoint(mobile) {
         gap: 0.5rem;
         flex-direction: column;
@@ -790,7 +834,6 @@
 }
 
 .menu__submenu-link {
-    display: inline-flex;
     align-items: center;
     font-style: normal;
     font-weight: 500;
@@ -800,6 +843,11 @@
     text-transform: uppercase;
     gap: 1.2rem;
     color: black;
+    display: flex;
+
+    @include breakpointMF(small-tablet) {
+        padding-right: 2.8rem;
+    }
     &:link,
     &:visited {
         color: black;

@@ -21,6 +21,10 @@ export default function modals() {
             document.body.classList.add('modal-open');
             window.activeModal = modal;
 
+            requestAnimationFrame(() => {
+                document.querySelector('.page-header')?.offsetWidth;
+            });
+
             const openModalEvent = new CustomEvent('openmodal');
             document.dispatchEvent(openModalEvent);
         };
@@ -44,6 +48,10 @@ export default function modals() {
 
         const closeModalEvent = new CustomEvent('closemodal');
         document.dispatchEvent(closeModalEvent);
+
+        requestAnimationFrame(() => {
+            document.querySelector('.page-header')?.offsetWidth;
+        });
     }
 
     window.openModal = openModal;

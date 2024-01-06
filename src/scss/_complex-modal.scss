@@ -16,10 +16,6 @@
     transition: opacity 0.4s, visibility 0s linear 0.4s;
     padding: 4rem var(--content-padding);
 
-    &:not(.active) {
-        right: calc(-1 * var(--sb-width, 0));
-    }
-
     &.active {
         opacity: 1;
         visibility: inherit;
