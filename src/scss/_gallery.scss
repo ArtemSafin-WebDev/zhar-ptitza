@@ -27,7 +27,6 @@
         }
     }
 
-
     .about-intro + & {
         background: transparent;
         padding-top: 0;
@@ -37,7 +36,7 @@
             padding-bottom: 4.5rem;
         }
     }
-   
+
     .spa + & {
         background: white;
         color: var(--text-color);
@@ -49,12 +48,6 @@
             padding-top: 6rem;
         }
     }
-
-   
-
-   
-
-   
 }
 
 .gallery__slider {
@@ -67,10 +60,8 @@
         margin: 0 3.6rem;
 
         @include breakpoint(mobile) {
-           
             margin: 0 1.2rem;
         }
-       
     }
 
     // .swiper-wrapper {
