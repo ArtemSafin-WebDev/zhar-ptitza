@@ -138,7 +138,7 @@
         @supports (width: 100svw) {
             left: 100svw;
             right: auto;
-            margin-left: -1.5rem;
+            margin-left: -3.5rem;
             transform: translateY(-50%) translateX(-100%) translateZ(0);
         }
     }
@@ -346,10 +346,10 @@
 }
 
 .intro__content-slider-title-logo {
-    height: 6rem;
+    height: 6.2rem;
     width: auto;
-    margin-bottom: 1rem;
-    margin-top: 0.4rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
 
     @include breakpoint(mobile) {
         height: 2.8rem;
